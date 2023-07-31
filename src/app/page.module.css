@@ -1,0 +1,61 @@
+.pageBg {
+  background: var(--blog-page-bg);
+
+}
+
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 52px 30px;
+
+  color: var(--main-text-color);
+}
+
+.topRow {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  gap: 30px;
+
+}
+
+
+
+.tile {
+  flex: 1;
+  background: var(--blog-card-bg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.webLogo {
+  filter: var(--web-logo);
+}
+
+.intro {
+  max-width: 410px;
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.14;
+  font-weight: 600;
+  letter-spacing: .001em;
+  padding: 28px 0 16.8px;
+}
+
+
+.pcHead {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -0.003em;
+}
+
+.subHead{
+  font-size: 21px;
+  font-weight: 400;
+  max-width: 325px;
+  text-align: center;
+  padding: 8px 0px;
+}
