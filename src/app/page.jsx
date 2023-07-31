@@ -33,6 +33,7 @@ export default function Home() {
                 alt="pc image"
               />
             </div>
+            <div>Hello Github</div>
           </div>
         </div>
       </div>
