@@ -45,7 +45,7 @@ a {
   --link-color: #2997ff;
   --web-logo: invert(10);
 
-
+  --text-se :  #a1a1a6;
 
 
 }
@@ -75,7 +75,9 @@ a {
   --post-shadow: rgba(0, 0, 0, 0.08);
 
   --link-color: #06c;
-  --web-logo: invert(0)
+  --web-logo: invert(0);
+
+  --text-se :   #6e6e73;
 
 
 }

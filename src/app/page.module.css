@@ -1,22 +1,17 @@
-.pageBg {
-  background: var(--blog-page-bg);
-
-}
-
 .page {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 52px 30px;
-
+  background: var(--blog-page-bg);
   color: var(--main-text-color);
+  padding-top: 52px;
 }
+
 
 .topRow {
-  width: 100%;
+  max-width: 1440px;
+  padding: 0 30px;
+  margin: 0 auto;
   height: 500px;
   display: flex;
   gap: 30px;
-
 }
 
 
@@ -36,13 +31,13 @@
 }
 
 .intro {
-  max-width: 410px;
+  max-width: 430px;
   text-align: center;
   font-size: 28px;
   line-height: 1.14;
   font-weight: 600;
   letter-spacing: .001em;
-  padding: 28px 0 16.8px;
+  padding: 28px 10px 16.8px;
 }
 
 
@@ -52,10 +47,116 @@
   letter-spacing: -0.003em;
 }
 
-.subHead{
+.subHead {
   font-size: 21px;
   font-weight: 400;
   max-width: 325px;
   text-align: center;
   padding: 8px 0px;
+}
+
+@media (max-width: 991px) {
+  .topRow {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/*  */
+
+.separator {
+  max-width: 1440px;
+  padding: 30px 30px 24px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  color: var(--text-se);
+
+  font-size: 28px;
+  line-height: 1.14286;
+  font-weight: 600;
+  letter-spacing: .007em;
+
+  margin-right: 20px;
+}
+
+.line {
+  margin-top: 4px;
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--border);
+}
+
+@media (max-width: 767px) {
+  .separator {
+    padding: 30px 30px 24px 24px;
+  }
+
+  .text {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 600;
+    letter-spacing: .009em;
+
+    margin-right: 20px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .text {
+    margin-right: 0;
+  }
+
+  .line {
+    display: none;
+  }
+}
+
+
+/*  */
+
+.cardContainer {
+  max-width: 1300px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
+
+.card {
+  height: 500px;
+  background: var(--blog-card-bg);
+}
+
+@media (max-width: 1025px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    height: auto;
+
+  }
+}
+
+@media (max-width: 767px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    padding: 0 24px;
+  }
 }
