@@ -24,28 +24,31 @@ a {
   --main-color: #fff;
   --main-text-color: #f5f5f7;
 
-  --nav-container-bg: rgba(29, 29, 31, 0.8);
+  --nav-container-bg: rgba(29, 29, 31, 0.72);
   --nav-icons: invert(0);
   --overlay-bg: rgba(0, 0, 0, .4);
   --quick-li-bg: #141414;
   --quick-li-hover-bg: #1d1d1f;
 
   --mob-input-bg: #1d1d1f;
+  --nav-border: rgba(255, 255, 255, 0.24);
+
 
   --footer-bg: #1d1d1f;
   --border: #424245;
   --social-icon: brightness(2);
 
-  --blog-page-bg: #000;
-  --blog-card-bg: #1d1d1f;
-  --blog-card-border: 1px solid #333336;
-  --post-hover: rgba(255, 255, 255, 0.16);
-  --post-shadow: rgba(255, 255, 255, 0.14);
+
+
 
   --link-color: #2997ff;
   --web-logo: invert(10);
 
-  --text-se :  #a1a1a6;
+  --text-se: #a1a1a6;
+
+  --row-bg: #141414;
+  --tile-bg: #1d1d1f;
+
 
 
 }
@@ -55,36 +58,40 @@ a {
   --main-color: #000;
   --main-text-color: #1d1d1f;
 
-  --nav-container-bg: rgba(240, 240, 240, 0.8);
+  --nav-container-bg: rgba(255, 255, 255, 0.72);
   --nav-icons: invert(80%);
   --overlay-bg: rgba(232, 232, 237, .4);
   --quick-li-bg: #fff;
   --quick-li-hover-bg: #f5f5f5;
 
   --mob-input-bg: #d7d7d7;
+  --nav-border: rgba(0, 0, 0, 0.16);
+
+
 
   --footer-bg: #f5f5f7;
   --border: #d2d2d7;
 
   --social-icon: contrast(10);
 
-  --blog-page-bg: #f7f7f9;
-  --blog-card-bg: #fff;
-  --blog-card-border: none;
-  --post-hover: rgba(0, 0, 0, 0.16);
-  --post-shadow: rgba(0, 0, 0, 0.08);
+
 
   --link-color: #06c;
   --web-logo: invert(0);
 
-  --text-se :   #6e6e73;
+  --text-se: #6e6e73;
+
+  --row-bg: #f5f5f7;
+  --tile-bg: #fff;
+
 
 
 }
 
 
+
+
+
 .container {
   background: var(--main-bg);
-
-
 }

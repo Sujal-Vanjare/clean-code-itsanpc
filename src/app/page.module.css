@@ -1,11 +1,15 @@
 .page {
-  background: var(--blog-page-bg);
   color: var(--main-text-color);
-  padding-top: 52px;
+  margin: 45px 0;
 }
 
 
 .topRow {
+  background-color: var(--row-bg);
+  padding: 10px 0px;
+}
+
+.tileContainer {
   max-width: 1440px;
   padding: 0 30px;
   margin: 0 auto;
@@ -18,7 +22,7 @@
 
 .tile {
   flex: 1;
-  background: var(--blog-card-bg);
+  background: var(--tile-bg);
 
   display: flex;
   flex-direction: column;
@@ -56,7 +60,7 @@
 }
 
 @media (max-width: 991px) {
-  .topRow {
+  .tileContainer {
     max-width: 100%;
     padding: 0;
     margin: 0;
@@ -67,96 +71,170 @@
   }
 }
 
+
 /*  */
 
-.separator {
-  max-width: 1440px;
-  padding: 30px 30px 24px;
+.section {
+  background-color: var(--row-bg);
+  margin-top: 34px;
+  padding: 20px 0;
+}
+
+.sectionContent {
   margin: 0 auto;
+  width: 980px;
+  position: relative;
+}
+
+.cardList {
   display: flex;
-  align-items: center;
-}
-
-.text {
-  color: var(--text-se);
-
-  font-size: 28px;
-  line-height: 1.14286;
-  font-weight: 600;
-  letter-spacing: .007em;
-
-  margin-right: 20px;
-}
-
-.line {
-  margin-top: 4px;
-  flex-grow: 1;
-  height: 1px;
-  background-color: var(--border);
-}
-
-@media (max-width: 767px) {
-  .separator {
-    padding: 30px 30px 24px 24px;
-  }
-
-  .text {
-    font-size: 24px;
-    line-height: 1.16667;
-    font-weight: 600;
-    letter-spacing: .009em;
-
-    margin-right: 20px;
-  }
-}
-
-
-@media (max-width: 500px) {
-  .text {
-    margin-right: 0;
-  }
-
-  .line {
-    display: none;
-  }
-}
-
-
-/*  */
-
-.cardContainer {
-  max-width: 1300px;
-  padding: 0 30px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
-  grid-column-gap: 20px;
-  grid-row-gap: 30px;
+  flex-flow: row wrap;
+  margin: 0;
+  gap: 36px;
 }
 
 .card {
-  height: 500px;
-  background: var(--blog-card-bg);
+  position: relative;
+  height: 100%;
+  background-color: var(--main-bg);
+  color: var(--main-text-color);
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-@media (max-width: 1025px) {
-  .cardContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    height: auto;
+.cardHero {
+  flex-direction: row;
+  height: 362px;
+  width: 100%;
+}
 
+.heroImg {
+  height: 100%;
+  width: auto;
+}
+
+.cardDesc {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  justify-content: space-between;
+
+}
+
+.category {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #91918c;
+}
+
+.heroHeadline {
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  overflow: hidden;
+}
+
+.paragraph {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.28577;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+}
+
+.cardDate {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.28577;
+  font-weight: 600;
+  letter-spacing: -0.016em;
+  color: #91918c;
+}
+
+/*  */
+.card2up {
+  flex-direction: column;
+  width: 472px;
+}
+
+.up2Img {
+  width: 100%;
+  height: auto;
+}
+
+.up2Headline {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+
+/*  */
+@media only screen and (max-width: 1068px) {
+  .sectionContent {
+    width: 692px;
   }
+
+  .cardList {
+    gap: 25px;
+  }
+
+  .cardHero {
+    height: 255px;
+  }
+
+  .cardDesc {
+    padding: 24px;
+  }
+
+  .heroHeadline {
+    font-size: 19px;
+  }
+
+  .paragraph {
+    font-size: 10px;
+  }
+
+  /*  */
+  .card2up {
+    width: 333px;
+  }
+
+  .up2Headline {
+    font-size: 19px;
+  }
+
 }
 
-@media (max-width: 767px) {
-  .cardContainer {
-    display: grid;
-    grid-template-columns: 1fr;
+@media only screen and (max-width: 735px) {
+  .sectionContent {
+    margin: 0 auto;
+    width: 87.5%;
+  }
+
+  .cardList {
+    flex-flow: column;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  .cardHero {
+    flex-direction: column;
+    height: fit-content;
+  }
+
+  .heroImg {
     width: 100%;
     height: auto;
-    grid-row-gap: 20px;
-    padding: 0 24px;
+  }
+
+  .card2up {
+    width: 100%;
   }
 }

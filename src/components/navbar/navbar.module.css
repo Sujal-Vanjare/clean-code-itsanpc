@@ -5,13 +5,16 @@
     backdrop-filter: saturate(180%) blur(20px);
     background: var(--nav-container-bg);
 
-    height: 44px;
+    height: 45px;
     z-index: 300;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
+
+    border-bottom: 1px solid var(--nav-border);
 }
+
 
 .nav_container nav {
     width: 1000px;
