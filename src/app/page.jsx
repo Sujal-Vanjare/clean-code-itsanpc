@@ -43,6 +43,7 @@ export default function Home() {
         {/*  */}
         <section className={styles.section}>
           <div className={styles.sectionContent}>
+
             <div className={styles.cardList}>
               <Link href="">
                 <div className={`${styles.card} ${styles.cardHero}`}>
@@ -122,6 +123,8 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
+          <div className={styles.itemSectionHeader}>The latest. <span className={styles.sectionHead2}>Take a look at what's new right now.</span></div>
+
           <div className={styles.itemContainer}>
 
             <div className={styles.item}>
