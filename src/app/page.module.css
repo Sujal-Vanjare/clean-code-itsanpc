@@ -284,6 +284,7 @@
 
 .item:hover {
   transform: scale3d(1.01,1.01,1.01);
+  box-shadow: 2px 4px 12px var(--card-hover-bg);
 }
 
 .itemImg {
