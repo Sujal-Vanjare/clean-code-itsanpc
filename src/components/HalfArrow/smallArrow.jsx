@@ -1,7 +1,7 @@
 import Link from "next/link";
-import styles from "./arrow.module.css";
+import styles from "./smallArrow.module.css";
 
-export default function Arrow(props) {
+export default function SmallArrow(props) {
   return (
     <>
       <Link href={props.link}>
