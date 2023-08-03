@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Arrow from "@/components/HalfArrow/arrow";
 import Link from "next/link";
 import SmallArrow from "@/components/HalfArrow/smallArrow";
+import ItemCard from "@/components/ItemCard/itemCard";
 
 export default function Home() {
   return (
@@ -126,67 +127,27 @@ export default function Home() {
           <div className={styles.itemSectionHeader}>The latest. <span className={styles.sectionHead2}>Take a look at what's new right now.</span></div>
 
           <div className={styles.itemContainer}>
-
-            <div className={styles.item}>
-
-              <Image
-                className={styles.itemImg}
-                src="/cpu-box-img.png"
-                width={260}
-                height={260}
-                alt="pc image"
-              />
-
-              <div className={styles.itemContent}>
-                <h3 className={styles.itemProduct}>Intel Core i9-13900K</h3>
-                <h1 className={styles.itemHead}>New intel 24 core Cpu, should we buy or Not</h1>
-                <p className={styles.itemDesc}>
-                  Price start from $589.00 - $599.00, is this best.
-                </p>
-                <SmallArrow link="" text="See more" />
-              </div>
-
-            </div>
-            <div className={styles.item}>
-
-              <Image
-                className={styles.itemImg}
-                src="/cpu-box-img2.png"
-                width={260}
-                height={260}
-                alt="pc image"
-              />
-
-              <div className={styles.itemContent}>
-                <h3 className={styles.itemProduct}>Intel Core i9-13900K</h3>
-                <h1 className={styles.itemHead}>New intel 24 core Cpu, should we buy or Not</h1>
-                <p className={styles.itemDesc}>
-                  Price start from $589.00 - $599.00, is this best.
-                </p>
-                <SmallArrow link="" text="See more" />
-              </div>
-
-            </div>
-            <div className={styles.item}>
-
-              <Image
-                className={styles.itemImg}
-                src="/cpu-box-img.png"
-                width={260}
-                height={260}
-                alt="pc image"
-              />
-
-              <div className={styles.itemContent}>
-                <h3 className={styles.itemProduct}>Intel Core i9-13900K</h3>
-                <h1 className={styles.itemHead}>New intel 24 core Cpu, should we buy or Not</h1>
-                <p className={styles.itemDesc}>
-                  Price start from $589.00 - $599.00, is this best.
-                </p>
-                <SmallArrow link="" text="See more" />
-              </div>
-
-            </div>
+            <ItemCard
+              href=""
+              img="cpu-box-img.png"
+              product="Intel i9 13900k"
+              head="New intel 24 core Cpu, should we buy or Not"
+              desc="Price start from $589.00 - $599.00, is this best."
+            />
+            <ItemCard
+              href=""
+              img="cpu-box-img2.png"
+              product="Amd RX 7800x"
+              head="New intel 24 core Cpu, should we buy or Not"
+              desc="Price start from $589.00 - $599.00, is this best."
+            />
+            <ItemCard
+              href=""
+              img="cpu-box-img2.png"
+              product="Amd RX 7800x"
+              head="New intel 24 core Cpu, should we buy or Not"
+              desc="Price start from $589.00 - $599.00, is this best."
+            />
           </div>
         </section>
       </div>
