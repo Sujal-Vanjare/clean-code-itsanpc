@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import SmallArrow from "../HalfArrow/smallArrow"
 import styles from "./itemCard.module.css";
 
 export default function ItemCard(props) {
@@ -19,7 +18,7 @@ export default function ItemCard(props) {
                         <h3 className={styles.itemProduct}>{props.product}</h3>
                         <h1 className={styles.itemHead}>{props.head}</h1>
                         <p className={styles.itemDesc}>{props.desc}</p>
-                        <SmallArrow link={props.href} text="See more" />
+                        <div className={styles.text}>See more<img className={styles.arrow} src="halfArrow.svg" /></div>
                     </div>
                 </div>
             </Link>

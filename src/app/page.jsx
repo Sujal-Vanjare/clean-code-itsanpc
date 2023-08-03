@@ -34,9 +34,10 @@ export default function Home() {
               <Image
                 className={styles.we}
                 src="/pc-img.png"
+                alt="pc image"
                 width={270}
                 height={270}
-                alt="pc image"
+                priority
               />
             </div>
           </div>

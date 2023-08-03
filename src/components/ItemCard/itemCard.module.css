@@ -60,3 +60,21 @@
         font-size: 10px;
     }
 }
+
+.text {
+    color: var(--link-color);
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: .011em;
+}
+
+.item:hover .text {
+    text-decoration: underline;
+}
+
+.arrow {
+    padding-left: 5.1px;
+    height: 11px;
+    width: auto;
+}
