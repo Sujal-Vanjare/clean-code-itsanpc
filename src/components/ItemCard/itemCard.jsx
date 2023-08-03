@@ -13,7 +13,7 @@ export default function ItemCard(props) {
                         src={`/${props.img}`}
                         width={260}
                         height={260}
-                        alt="pc image"
+                        alt="image or the item"
                     />
                     <div className={styles.itemContent}>
                         <h3 className={styles.itemProduct}>{props.product}</h3>

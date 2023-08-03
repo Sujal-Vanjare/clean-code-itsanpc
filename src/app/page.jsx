@@ -4,6 +4,7 @@ import Arrow from "@/components/HalfArrow/arrow";
 import Link from "next/link";
 import SmallArrow from "@/components/HalfArrow/smallArrow";
 import ItemCard from "@/components/ItemCard/itemCard";
+import BlogCardSection from "@/components/BlogCardSection/blogCardSection";
 
 export default function Home() {
   return (
@@ -42,86 +43,33 @@ export default function Home() {
         </div>
 
         {/*  */}
+
         <section className={styles.section}>
-          <div className={styles.sectionContent}>
+          <BlogCardSection
+            firstHref=""
+            firstImg="pc-setup-img.png"
+            firstCateg="pc setup"
+            firstHead="Best Pc Setup under $2000"
+            firstPara="The best PC setup can vary depending on individual needs, preferences, and the intended use of the computer. including gaming, content creation, and professional work "
+            firstDate="Aug 03, 2023"
 
-            <div className={styles.cardList}>
-              <Link href="">
-                <div className={`${styles.card} ${styles.cardHero}`}>
-                  <Image
-                    className={styles.heroImg}
-                    src="/16-9-img.png"
-                    width={640}
-                    height={360}
-                    alt="image of the card"
-                  />
-                  <div className={styles.cardDesc}>
-                    <div className={styles.cardHead}>
-                      <p className={styles.category}>VIDEO</p>
-                      <h2 className={styles.heroHeadline}>
-                        Principles of spatial design
-                      </h2>
-                      <p className={styles.paragraph}>
-                        Learn how to design with depth, scale, windows, and
-                        immersion, and apply best practices for creating
-                        comfortable, human-centered experiences that transform
-                        reality.
-                      </p>
-                    </div>
-                    <div className={styles.cardDate}>Aug 01, 2023</div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="">
-                <div className={`${styles.card} ${styles.card2up}`}>
-                  <Image
-                    className={styles.heroImg}
-                    src="/16-9-img.png"
-                    width={640}
-                    height={360}
-                    alt="image of the card"
-                  />
-                  <div className={styles.cardDesc}>
-                    <div className={styles.cardHead}>
-                      <p className={styles.category}>VIDEO</p>
-                      <h2 className={styles.up2Headline}>
-                        Design dynamic Live Activities
-                      </h2>
-                      <p className={styles.paragraph}>
-                        Learn the best way to create graphically rich layouts that update seamlessly on the Lock Screen, in StandBy, and in the Dynamic Island.
-                      </p>
-                    </div>
-                    <div className={styles.cardDate}>Aug 01, 2023</div>
-                  </div>
-                </div>
-              </Link>
-              <Link href="">
-                <div className={`${styles.card} ${styles.card2up}`}>
-                  <Image
-                    className={styles.heroImg}
-                    src="/16-9-img.png"
-                    width={640}
-                    height={360}
-                    alt="image of the card"
-                  />
-                  <div className={styles.cardDesc}>
-                    <div className={styles.cardHead}>
-                      <p className={styles.category}>VIDEO</p>
-                      <h2 className={styles.up2Headline}>
-                        Design dynamic Live Activities
-                      </h2>
-                      <p className={styles.paragraph}>
-                        Learn the best way to create graphically rich layouts that update seamlessly on the Lock Screen, in StandBy, and in the Dynamic Island.
-                      </p>
-                    </div>
-                    <div className={styles.cardDate}>Aug 01, 2023</div>
-                  </div>
-                </div>
-              </Link>
+            secondHref=""
+            secondImg="intelvsamd-img.png"
+            secondCateg="intel vs amd"
+            secondHead="Intel better than Amd"
+            secondPara="Intel vs Amd what should you choose , what is the best for you, what should you look in before buying that, lets dive into that and look."
+            secondDate="Aug  06, 2023"
 
-            </div>
-          </div>
+            thirdHref=""
+            thirdImg="rtx4060img.png"
+            thirdCateg="rtx 4060 ti"
+            thirdHead="New nvidia RTX 4060ti"
+            thirdPara="NVIDIA's RTX series graphics cards are known for their advanced ray-tracing capabilities and high-performance gaming features."
+            thirdDate="Aug 16, 2023"
+          />
+
         </section>
+
 
         <section className={styles.section}>
           <div className={styles.itemSectionHeader}>The latest. <span className={styles.sectionHead2}>Take a look at what's new right now.</span></div>

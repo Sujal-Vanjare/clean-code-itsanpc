@@ -1,0 +1,167 @@
+.sectionContent {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+}
+
+.cardList {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    gap: 36px;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    background-color: var(--main-bg);
+    color: var(--main-text-color);
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+
+}
+
+.cardHero {
+    flex-direction: row;
+    height: 362px;
+    width: 100%;
+}
+
+.heroImg {
+    height: 100%;
+    width: auto;
+}
+
+.cardDesc {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    justify-content: space-between;
+
+}
+
+.category {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.33;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #91918c;
+}
+
+.heroHeadline {
+    font-size: 32px;
+    line-height: 1.125;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    overflow: hidden;
+}
+
+.paragraph {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.28577;
+    font-weight: 600;
+    letter-spacing: -0.016em;
+}
+
+.cardDate {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.28577;
+    font-weight: 600;
+    letter-spacing: -0.016em;
+    color: #91918c;
+}
+
+/*  */
+.card2up {
+    flex-direction: column;
+    width: 472px;
+}
+
+.up2Img {
+    width: 100%;
+    height: auto;
+}
+
+.up2Headline {
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+
+/*  */
+@media only screen and (max-width: 1068px) {
+    .sectionContent {
+        width: 692px;
+    }
+
+    .cardList {
+        gap: 25px;
+    }
+
+    .cardHero {
+        height: 255px;
+    }
+
+    .cardDesc {
+        padding: 24px;
+    }
+
+    .heroHeadline {
+        font-size: 19px;
+    }
+
+    .paragraph {
+        font-size: 10px;
+    }
+
+    /*  */
+    .card2up {
+        width: 333px;
+    }
+
+    .up2Headline {
+        font-size: 19px;
+    }
+
+}
+
+@media only screen and (max-width: 735px) {
+    .sectionContent {
+        margin: 0 auto;
+        width: 87.5%;
+    }
+
+    .cardList {
+        flex-flow: column;
+        justify-content: center;
+        gap: 36px;
+    }
+
+    .cardHero {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .heroImg {
+        width: 100%;
+        height: auto;
+    }
+
+    .card2up {
+        width: 100%;
+    }
+}
+
+
+.cardList a:focus {
+    outline: 4px solid var(--focus-outline);
+    outline-offset: 1px;
+    border-radius: 16px;
+}
