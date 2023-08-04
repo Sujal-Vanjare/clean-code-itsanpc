@@ -1,8 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Arrow from "@/components/HalfArrow/arrow";
-import Link from "next/link";
-import SmallArrow from "@/components/HalfArrow/smallArrow";
 import ItemCard from "@/components/ItemCard/itemCard";
 import BlogCardSection from "@/components/BlogCardSection/blogCardSection";
 

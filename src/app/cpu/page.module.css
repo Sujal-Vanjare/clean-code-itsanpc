@@ -1,0 +1,57 @@
+.page{
+    padding-top: 45px;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 980px;
+
+    display: flex;
+
+}
+
+.sidebar{
+    width: 200px;
+}
+
+.content{
+    width: 780px;
+    padding-left: 40px;
+    color: var(--main-text-color);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero{
+    padding: 40px 0 32px;
+}
+
+.topicTitle{
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    margin-bottom: 32px;
+}
+
+.topicSubhead{
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 400;
+    letter-spacing: -.055em;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+.text{
+    margin-top: 27.2px;
+
+    font-size: 1rem;
+    line-height: 1.55;
+    font-weight: 400;
+    letter-spacing: .0045em;
+}
