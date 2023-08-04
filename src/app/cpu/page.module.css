@@ -1,8 +1,8 @@
-.page{
+.page {
     padding-top: 45px;
 }
 
-.container{
+.container {
     margin: 0 auto;
     max-width: 980px;
 
@@ -10,11 +10,11 @@
 
 }
 
-.sidebar{
+.sidebar {
     width: 200px;
 }
 
-.content{
+.content {
     width: 780px;
     padding-left: 40px;
     color: var(--main-text-color);
@@ -23,35 +23,64 @@
     flex-direction: column;
 }
 
-.hero{
+.hero {
     padding: 40px 0 32px;
 }
 
-.topicTitle{
+.topicTitle {
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -.04em;
     margin-bottom: 32px;
 }
 
-.topicSubhead{
+.topicSubhead {
     font-size: 28px;
     line-height: 1.14286;
     font-weight: 400;
     letter-spacing: -.055em;
 }
 
-.image{
+.image {
     width: 100%;
     height: auto;
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
-.text{
+.startText {
     margin-top: 27.2px;
 
-    font-size: 1rem;
+
+}
+
+
+
+
+.content p {
+    font-size: 16px;
     line-height: 1.55;
     font-weight: 400;
     letter-spacing: .0045em;
+
+    margin-top: 13.6px;
+}
+
+.firstP {
+    margin-top: 27.2px !important;
+}
+
+.content ul {
+    margin-left: 20px;
+}
+
+
+
+.content h4{
+    font-size: 24px;
+    line-height: 1.55;
+    font-weight: 600;
+    letter-spacing: -.04em;
+
+
+    margin-top: 38px;
 }
