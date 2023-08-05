@@ -102,34 +102,7 @@ export default function Home() {
         </section>
 
 
-        <section className={styles.section}>
-          <div className={styles.itemSectionHeader}>The latest. <span className={styles.sectionHead2}>Take a look at what's new right now.</span></div>
-
-          <div className={styles.itemContainer}>
-            <ItemCard
-              href=""
-              img="cpu-box-img.png"
-              product="Intel i9 13900k"
-              head="New intel 24 core Cpu, should we buy or Not"
-              desc="Price start from $589.00 - $599.00, is this best."
-            />
-            <ItemCard
-              href=""
-              img="cpu-box-img2.png"
-              product="Amd RX 7800x"
-              head="New intel 24 core Cpu, should we buy or Not"
-              desc="Price start from $589.00 - $599.00, is this best."
-            />
-            <ItemCard
-              href=""
-              img="cpu-box-img2.png"
-              product="Amd RX 7800x"
-              head="New intel 24 core Cpu, should we buy or Not"
-              desc="Price start from $589.00 - $599.00, is this best."
-            />
-          </div>
-        </section>
-
+ 
 
       </div>
     </>
