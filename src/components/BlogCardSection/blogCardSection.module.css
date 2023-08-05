@@ -4,6 +4,23 @@
     position: relative;
 }
 
+.sectionHead {
+    font-size: 28px;
+    line-height: 1.16667;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+
+    margin-bottom: 28px;
+
+}
+
+.sectionHead2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--date-text-color);
+
+}
+
 .cardList {
     display: flex;
     flex-flow: row wrap;
@@ -98,6 +115,15 @@
         width: 692px;
     }
 
+    .sectionHead {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .sectionHead2 {
+        font-size: 20px;
+    }
+
     .cardList {
         gap: 25px;
     }
@@ -133,6 +159,15 @@
     .sectionContent {
         margin: 0 auto;
         width: 87.5%;
+    }
+
+    .sectionHead {
+        font-size: 21px;
+        margin-bottom: 24px;
+    }
+
+    .sectionHead2 {
+        font-size: 18px;
     }
 
     .cardList {

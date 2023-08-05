@@ -6,6 +6,8 @@ export default function BlogCardSection(props) {
     return (
         <>
             <div className={styles.sectionContent}>
+                <div className={styles.sectionHead}>{props.sectionHead}&nbsp;&nbsp;<span className={styles.sectionHead2}>{props.sectionHead2}</span></div>
+
 
                 <div className={styles.cardList}>
                     <Link href={props.firstHref}>

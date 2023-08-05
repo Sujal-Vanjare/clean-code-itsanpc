@@ -46,6 +46,9 @@ export default function Home() {
 
         <section className={styles.section}>
           <BlogCardSection
+             sectionHead="Latest Blogs"
+             sectionHead2="check this out!"
+
             firstHref=""
             firstImg="pc-setup-img.png"
             firstCateg="pc setup"
@@ -71,6 +74,9 @@ export default function Home() {
         </section>
         <section className={styles.section}>
           <ItemCardSection
+            sectionHead="Latest Parts"
+            sectionHead2="Take a look at what's new right now."
+
             firstHref=""
             firstImg="16-9-gpu.png"
             firstCateg="Amd RX 7800x"

@@ -7,9 +7,7 @@ export default function ItemCardSection(props) {
         <>
             <div className={styles.sectionContent}>
 
-                <div>
-                <div className={styles.sectionHead}>Latest Cpu. <span className={styles.sectionHead2}>Take a look at what's new right now.</span></div>
-                </div>
+                <div className={styles.sectionHead}>{props.sectionHead}&nbsp;&nbsp;<span className={styles.sectionHead2}>{props.sectionHead2}</span></div>
 
                 <div className={styles.cardList}>
                     <Link href={props.firstHref}>
