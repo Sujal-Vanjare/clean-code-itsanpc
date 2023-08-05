@@ -1,14 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Arrow from "@/components/HalfArrow/arrow";
-import ItemCard from "@/components/ItemCard/itemCard";
+
 import BlogCardSection from "@/components/BlogCardSection/blogCardSection";
 import ItemCardSection from "@/components/ItemCardSection/itemCardSection";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       <div className={styles.page}>
+
+
         <div className={styles.topRow}>
           <div className={styles.tileContainer}>
             <div className={styles.tile}>
@@ -22,25 +24,33 @@ export default function Home() {
               <p className={styles.intro}>
                 Discover the best PC parts for your PC-Build
               </p>
-              <Arrow link="" text="See more" />
+              <Link href="">
+                <p className={styles.learnMore}>See more<img className={styles.arrow} src="halfArrow.svg" alt="" />
+                </p>
+              </Link>
             </div>
             <div className={styles.tile}>
               <h1 className={styles.pcHead}>PC Build Guide</h1>
               <p className={styles.subHead}>
                 What do you need to build a PC? A Step-by-Step Guide.
               </p>
-              <Arrow link="" text="Learn more" />
+              <Link href="">
+                <p className={styles.learnMore}>Learn more<img className={styles.arrow} src="halfArrow.svg" alt="" />
+                </p>
+              </Link>
               <Image
-                className={styles.we}
+                className={styles.pcImg}
                 src="/pc-img.png"
                 alt="pc image"
-                width={270}
-                height={270}
+                width={470}
+                height={470}
                 priority
               />
             </div>
           </div>
         </div>
+
+
 
         {/*  */}
 

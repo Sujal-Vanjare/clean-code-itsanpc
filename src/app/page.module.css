@@ -18,6 +18,10 @@
   gap: 30px;
 }
 
+.pcImg{
+  height: 260px;
+  width: auto;
+}
 
 
 .tile {
@@ -59,16 +63,80 @@
   padding: 8px 0px;
 }
 
-@media (max-width: 991px) {
+.learnMore {
+  color: var(--link-color);
+
+  font-size: 21px;
+  line-height: 1.381;
+  font-weight: 500;
+  letter-spacing: .011em;
+  padding-top: 6px;
+}
+
+.learnMore:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.arrow {
+  padding-left: 6.3px;
+
+}
+
+
+@media only screen and (max-width: 1068px) {
   .tileContainer {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 1000px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+      height: 400px;
+      gap: 20px;
   }
+
+  .webLogo{
+    width: 200px;
+    height: auto;
+  }
+  .intro{
+    font-size: 24px;
+  }
+
+  .pcImg {
+      width: auto;
+      height: 200px;
+  }
+
+  .pcHead {
+      font-size: 32px;
+  }
+
+  .subHead {
+      font-size: 18px;
+  }
+
+  .learnMore {
+      font-size: 17px;
+      line-height: 1.23536;
+      font-weight: 400;
+      letter-spacing: .011em;
+  }
+
+  .arrow {
+      padding-left: 5.1px;
+      height: 11px;
+      width: auto;
+  }
+}
+
+
+@media only screen and (max-width: 735px) {
+  .tileContainer {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+
 }
 
 
@@ -76,7 +144,7 @@
 
 .section {
   background-color: var(--row-bg);
-  margin-top: 15px;
+  margin-top: 25px;
   padding: 36px 0;
 }
 
