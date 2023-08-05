@@ -12,13 +12,16 @@ export default function BlogCardSection(props) {
                 <div className={styles.cardList}>
                     <Link href={props.firstHref}>
                         <div className={`${styles.card} ${styles.cardHero}`}>
-                            <Image
-                                className={styles.heroImg}
-                                src={`/${props.firstImg}`}
-                                width={640}
-                                height={360}
-                                alt="image of the card"
-                            />
+                            <div className={styles.cardHeroImg}>
+                                <Image
+                                    className={styles.heroImg}
+                                    src={`/${props.firstImg}`}
+                                    width={1200}
+                                    height={675}
+                                    alt="image of the card"
+                                    priority={true}
+                                />
+                            </div>
                             <div className={styles.cardDesc}>
                                 <div className={styles.cardHead}>
                                     <p className={styles.category}>{props.firstCateg}</p>
@@ -31,13 +34,19 @@ export default function BlogCardSection(props) {
                     </Link>
                     <Link href={props.secondHref}>
                         <div className={`${styles.card} ${styles.card2up}`}>
-                            <Image
-                                className={styles.up2Img}
-                                src={`/${props.secondImg}`}
-                                width={640}
-                                height={360}
-                                alt="image of the card"
-                            />
+                            <div className={styles.cardUp2Img}>
+
+
+                                <Image
+                                    className={styles.up2Img}
+                                    src={`/${props.secondImg}`}
+                                    width={1200}
+                                    height={675}
+                                    alt="image of the card"
+                                    priority={true}
+
+                                />
+                            </div>
                             <div className={styles.cardDesc}>
                                 <div className={styles.cardHead}>
                                     <p className={styles.category}>{props.secondCateg}</p>
@@ -50,13 +59,17 @@ export default function BlogCardSection(props) {
                     </Link>
                     <Link href={props.thirdHref}>
                         <div className={`${styles.card} ${styles.card2up}`}>
-                            <Image
-                                className={styles.up2Img}
-                                src={`/${props.thirdImg}`}
-                                width={640}
-                                height={360}
-                                alt="image of the card"
-                            />
+                            <div className={styles.cardUp2Img}>
+                                <Image
+                                    className={styles.up2Img}
+                                    src={`/${props.thirdImg}`}
+                                    width={1200}
+                                    height={675}
+                                    alt="image of the card"
+                                    priority={true}
+
+                                />
+                            </div>
                             <div className={styles.cardDesc}>
                                 <div className={styles.cardHead}>
                                     <p className={styles.category}>{props.thirdCateg}</p>
