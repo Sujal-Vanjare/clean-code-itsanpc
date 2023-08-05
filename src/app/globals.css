@@ -51,6 +51,7 @@ a {
   --card-hover-bg:rgba(255, 255, 255, 0.10);
 
   --focus-outline:  rgba(0, 102, 204, 0.76);
+  --date-text-color: #91918c;
 
 
 
@@ -93,6 +94,8 @@ a {
   --card-hover-bg:rgba(0,0,0,.08);
 
   --focus-outline: rgba(41, 151, 255, 0.76);
+  --date-text-color: #6e6e73;
+
 
 
 

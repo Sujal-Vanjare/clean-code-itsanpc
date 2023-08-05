@@ -19,7 +19,6 @@
     display: flex;
     border-radius: 16px;
     overflow: hidden;
-
 }
 
 .cardHero {
@@ -42,13 +41,11 @@
 }
 
 .category {
-    text-transform: uppercase;
     margin-bottom: 8px;
     font-size: 12px;
     line-height: 1.33;
     font-weight: 700;
-    letter-spacing: -0.01em;
-    color: #91918c;
+    color: var(--date-text-color);
 }
 
 .heroHeadline {
@@ -64,7 +61,7 @@
     font-size: 14px;
     line-height: 1.28577;
     font-weight: 600;
-    letter-spacing: -0.016em;
+    letter-spacing: -0.005em;
 }
 
 .cardDate {
@@ -72,8 +69,8 @@
     font-size: 14px;
     line-height: 1.28577;
     font-weight: 600;
-    letter-spacing: -0.016em;
-    color: #91918c;
+    letter-spacing: -0.01em;
+    color: var(--date-text-color);
 }
 
 /*  */

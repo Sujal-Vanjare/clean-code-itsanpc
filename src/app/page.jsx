@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Arrow from "@/components/HalfArrow/arrow";
 import ItemCard from "@/components/ItemCard/itemCard";
 import BlogCardSection from "@/components/BlogCardSection/blogCardSection";
+import ItemCardSection from "@/components/ItemCardSection/itemCardSection";
 
 export default function Home() {
   return (
@@ -54,17 +55,48 @@ export default function Home() {
 
             secondHref=""
             secondImg="intelvsamd-img.png"
-            secondCateg="intel vs amd"
-            secondHead="Intel better than Amd"
-            secondPara="Intel vs Amd what should you choose , what is the best for you, what should you look in before buying that, lets dive into that and look."
-            secondDate="Aug  06, 2023"
+            secondCateg="Intel Vs Amd"
+            secondHead="Intel is better than Amd"
+            secondPara="Explore the latest updates to SF Symbols, Apple's library of iconography designed to integrate seamlessly with San Francisco, the system font for Apple platforms."
+            secondDate="June 21, 2023"
 
             thirdHref=""
             thirdImg="rtx4060img.png"
-            thirdCateg="rtx 4060 ti"
+            thirdCateg="Rtx 4060 ti"
             thirdHead="New nvidia RTX 4060ti"
             thirdPara="NVIDIA's RTX series graphics cards are known for their advanced ray-tracing capabilities and high-performance gaming features."
             thirdDate="Aug 16, 2023"
+          />
+
+        </section>
+        <section className={styles.section}>
+          <ItemCardSection
+            firstHref=""
+            firstImg="16-9-gpu.png"
+            firstCateg="Amd RX 7800x"
+            firstHead="New intel 24 core Cpu, should we buy or Not"
+            firstPara="Price start from $589.00 - $599.00, is this best."
+
+
+            secondHref=""
+            secondImg="16-9-cpu-box.png"
+            secondCateg="Amd RX 7800x"
+            secondHead="New intel 24 core Cpu, should we buy or Not"
+            secondPara="Price start from $589.00 - $599.00, is this best."
+
+            thirdHref=""
+            thirdImg="16-9-cpu-box2.png"
+            thirdCateg="Intel i9 13900k"
+            thirdHead="New intel 24 core Cpu, should we buy or Not"
+            thirdPara="Price start from $589.00 - $599.00, is this best."
+
+
+            fourthHref=""
+            fourthImg="16-9-cpu-box.png"
+            fourthCateg="Amd RX 7800x"
+            fourthHead="New intel 24 core Cpu, should we buy or Not"
+            fourthPara="Price start from $589.00 - $599.00, is this best."
+
           />
 
         </section>
@@ -97,6 +129,8 @@ export default function Home() {
             />
           </div>
         </section>
+
+
       </div>
     </>
   );
