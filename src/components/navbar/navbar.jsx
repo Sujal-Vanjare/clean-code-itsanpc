@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 
+
 export default function Navbar() {
   const [isHide, setIsHide] = useState(true);
   const desktopSearchHideClass = () => {
@@ -30,6 +31,7 @@ export default function Navbar() {
   const cancelMobileSearchActiveClass = () => {
     setSearchActive(true);
   };
+
   return (
     <>
       <div>

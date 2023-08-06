@@ -58,11 +58,12 @@ export default function Cpu() {
             <h4>Step 2: Set a Budget</h4>
             <p>Once you've defined the purpose of your custom PC, it's crucial to establish a budget. Building a custom PC allows you to control costs better than buying a pre-built one, but it's still essential to have a spending limit in mind. Consider the following while setting your budget:</p>
             <ul>
-              <li><p><strong></strong>&nbsp; </p></li>
-              <li><p><strong></strong>&nbsp; </p></li>
-              <li><p><strong></strong>&nbsp; </p></li>
-              <li><p><strong></strong>&nbsp; </p></li>
+              <li><p><strong>Components:</strong>&nbsp; Different components have varying price ranges. Research the prices of CPUs, graphics cards, motherboards, RAM, storage, power supplies, and PC cases to get an idea of their costs.</p></li>
+              <li><p><strong>Features:</strong>&nbsp; Decide which features are essential for your purpose and prioritize them. Some components may offer extra features or performance at a higher cost, but you might not need them.</p></li>
+              <li><p><strong>Upgradability:</strong>&nbsp; Consider if you want to leave room for future upgrades. This may influence your budget as you may choose to invest more in certain components that will last longer.</p></li>
+              <li><p><strong>Peripherals:</strong>&nbsp; Don't forget to include the cost of peripherals like a monitor, keyboard, mouse, and speakers if you need them.</p></li>
             </ul>
+            <p>By setting a budget, you'll have a clear idea of how much you can spend on each component, making it easier to make informed decisions and prevent overspending. It will also help you find the best balance between performance and cost for your custom PC.</p>
 
 
 
