@@ -97,54 +97,47 @@ export default function Cpu() {
                   />
                 </p>
               </li>
+              <li>
+                <p>
+                  and other PC peripherals according to your needs and requirements
+                </p>
+              </li>
             </ul>
 
-            <p>
-              and other PC peripherals according to your needs and requirements
-            </p>
+
 
             <h4>
               <span className={styles.head2}>Lets dive into</span> Building A PC{" "}
             </h4>
             <p>for a Pc build you need this Compopnents</p>
 
-            <ul>
+            <ul className={styles.ulCircle}>
               <li>
                 <p>
-                  <strong>Gaming:</strong>&nbsp; If you want a PC for gaming,
-                  you'll need a powerful graphics card, a fast processor, and
-                  enough RAM to handle modern games.
+                  <span><strong>CPU</strong></span>
+                  
+                  
                 </p>
               </li>
 
               <li>
                 <p>
-                  <strong> Content Creation:</strong>&nbsp; For tasks like video
-                  editing, graphic design, or 3D rendering, you'll need a
-                  powerful CPU, plenty of RAM, and possibly a high-end graphics
-                  card.
+                  <strong>GPU</strong>
                 </p>
               </li>
               <li>
                 <p>
-                  <strong>Productivity:</strong>&nbsp; If you need a PC for
-                  office work, web browsing, and multitasking, a mid-range CPU
-                  and sufficient RAM should sufficient.
+                  <strong>Productivity:</strong>
                 </p>
               </li>
               <li>
                 <p>
-                  <strong>Home Theater or Media Center:</strong>&nbsp; For a PC
-                  that connects to your TV and serves as a media center, a small
-                  form factor PC with decent graphics capabilities might be
-                  ideal.
+                  <strong>Home Theater or Media Center:</strong>
                 </p>
               </li>
               <li>
                 <p>
-                  <strong>Budget-Friendly PC:</strong>&nbsp; If you have a
-                  limited budget, you can prioritize essential components and
-                  upgrade later.
+                  <strong>Budget-Friendly PC:</strong>
                 </p>
               </li>
             </ul>
