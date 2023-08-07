@@ -9,9 +9,11 @@ export default function Cpu() {
           <div className={styles.sidebar}>hello</div>
           <div className={styles.content}>
             <div className={styles.hero}>
-              <h1 className={styles.topicTitle}>PC Build Guide 2023</h1>
+              <h1 className={styles.topicTitle}>
+                PC Build Complete Guide 2023
+              </h1>
               <h3 className={styles.topicSubhead}>
-                What do you need to build a PC ? ( A step by step Guide ){" "}
+                What do you need to build a Complete PC Setup ?
               </h3>
             </div>
 
@@ -23,47 +25,88 @@ export default function Cpu() {
               height={675}
               priority
             />
-            <p className={styles.firstP}>
-              Building a custom PC is like creating your own personalized
-              computer. Instead of buying a pre-made computer from a store, you
-              get to choose all the individual parts that go into it, like the
-              processor, graphics card, memory, and storage. It's kind of like
-              building with Lego blocks!
-            </p>
-            <p>This way,</p>
-            <ul>
+            <h4 className={styles.firstP}>
+              <span className={styles.head2}>Lets get straight into</span>{" "}
+              Building A Complete Pc Setup
+            </h4>
+            <p>for a Complete setup you need </p>
+            <ul className={styles.ulCircle}>
               <li>
-                <p>
-                  You can make sure the PC fits your exact needs and budget.
+                <p className={styles.itemImgList}>
+                  <strong>PC</strong>
+
+                  <Image
+                    className={styles.ulImage}
+                    src="/pc-cabinet.png"
+                    alt="pc image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                 </p>
               </li>
               <li>
-                <p>
-                  Whether you want a powerful gaming rig, a speedy workstation,
-                  or a budget-friendly everyday computer,
+                <p className={styles.itemImgList}>
+                  <strong>Monitor</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/monitor.png"
+                    alt="monitor image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                 </p>
               </li>
               <li>
-                <p>you can pick the components that match your requirements.</p>
+                <p className={styles.itemImgList}>
+                  <strong>Keyboard</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/keyboard.png"
+                    alt="keyboard image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
+                </p>
               </li>
               <li>
-                <p>
-                  Plus, it's a fun and rewarding experience to put it all
-                  together yourself!
+                <p className={styles.itemImgList}>
+                  <strong>Mouse</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/mouse.png"
+                    alt="mouse image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
+                </p>
+              </li>
+              <li>
+                <p className={styles.itemImgList}>
+                  <strong>Headphone</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/headphone.png"
+                    alt="headphone image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                 </p>
               </li>
             </ul>
 
-            <p>Here are steps for building a PC</p>
-
-            <h4>Step 1: Define Your Purpose</h4>
-
             <p>
-              Before you start building your custom PC, it's essential to
-              understand what you want to use it for. This will guide your
-              choices when selecting the components. Here are some common
-              purposes people build custom PCs for:
+              and other PC peripherals according to your needs and requirements
             </p>
+
+            <h4>
+              <span className={styles.head2}>Lets dive into</span> Building A PC{" "}
+            </h4>
+            <p>for a Pc build you need this Compopnents</p>
 
             <ul>
               <li>
@@ -163,9 +206,11 @@ export default function Cpu() {
             <h4>Step 3: Understanding PC Components</h4>
 
             <ul>
-              <li></li>
+              <li>CPU</li>
+              <li>GPU</li>
+              <li>RAM</li>
+              <li>CPU</li>
             </ul>
-
           </div>
         </div>
       </main>

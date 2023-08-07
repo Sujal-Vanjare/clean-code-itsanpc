@@ -68,11 +68,17 @@
 .firstP {
     margin-top: 27.2px !important;
 }
+.head2{
+    color: var(--date-text-color);
+}
 
 .content ul {
     margin-left: 20px;
 }
 
+.ulCircle{
+    list-style-type: circle;
+}
 
 
 .content h4{
@@ -84,3 +90,18 @@
 
     margin-top: 38px;
 }
+
+
+.ulImage{
+    width: auto;
+    height: 100%;
+}
+
+
+.itemImgList{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
