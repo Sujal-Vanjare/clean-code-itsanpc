@@ -53,7 +53,7 @@
 
 .card:hover .up2Img,
 .card:hover .heroImg {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 .cardHeroImg {

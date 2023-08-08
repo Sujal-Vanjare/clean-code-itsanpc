@@ -99,12 +99,11 @@ export default function Cpu() {
               </li>
               <li>
                 <p>
-                  and other PC peripherals according to your needs and requirements
+                  and other PC peripherals according to your needs and
+                  requirements
                 </p>
               </li>
             </ul>
-
-
 
             <h4>
               <span className={styles.head2}>Lets dive into</span> Building A PC{" "}
@@ -114,7 +113,9 @@ export default function Cpu() {
             <ul className={styles.ulCircle}>
               <li>
                 <p className={styles.itemImgList}>
-                  <span><strong>CPU</strong></span>
+                  <span>
+                    <strong>CPU</strong>
+                  </span>
                   <Image
                     className={styles.ulImage}
                     src="/cpu.png"
@@ -123,7 +124,6 @@ export default function Cpu() {
                     height={675}
                     priority
                   />
-                  
                 </p>
               </li>
 
@@ -206,8 +206,6 @@ export default function Cpu() {
                 </p>
               </li>
             </ul>
-
-
           </div>
         </div>
       </main>
