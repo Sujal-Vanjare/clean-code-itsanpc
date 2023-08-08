@@ -113,97 +113,101 @@ export default function Cpu() {
 
             <ul className={styles.ulCircle}>
               <li>
-                <p>
+                <p className={styles.itemImgList}>
                   <span><strong>CPU</strong></span>
-                  
+                  <Image
+                    className={styles.ulImage}
+                    src="/cpu.png"
+                    alt="cpu image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                   
                 </p>
               </li>
 
               <li>
-                <p>
+                <p className={styles.itemImgList}>
                   <strong>GPU</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/gpu.png"
+                    alt="gpu image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                 </p>
               </li>
               <li>
-                <p>
-                  <strong>Productivity:</strong>
+                <p className={styles.itemImgList}>
+                  <strong>SSD</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/ssd1.png"
+                    alt="ssd image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                 </p>
               </li>
               <li>
-                <p>
-                  <strong>Home Theater or Media Center:</strong>
+                <p className={styles.itemImgList}>
+                  <strong>RAM</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/ram.png"
+                    alt="ram image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                 </p>
               </li>
               <li>
-                <p>
-                  <strong>Budget-Friendly PC:</strong>
+                <p className={styles.itemImgList}>
+                  <strong>Motherboard</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/motherboard.png"
+                    alt="motherboard image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
+                </p>
+              </li>
+              <li>
+                <p className={styles.itemImgList}>
+                  <strong>PSU</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/psu.png"
+                    alt="psu image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
+                </p>
+              </li>
+              <li>
+                <p className={styles.itemImgList}>
+                  <strong>Case</strong>
+                  <Image
+                    className={styles.ulImage}
+                    src="/case.png"
+                    alt="case image"
+                    width={1200}
+                    height={675}
+                    priority
+                  />
                 </p>
               </li>
             </ul>
 
-            <p>
-              Knowing your purpose will help you make informed decisions and
-              ensure that your custom PC meets your specific needs without
-              overspending on unnecessary components.
-            </p>
 
-            <h4>Step 2: Set a Budget</h4>
-            <p>
-              Once you've defined the purpose of your custom PC, it's crucial to
-              establish a budget. Building a custom PC allows you to control
-              costs better than buying a pre-built one, but it's still essential
-              to have a spending limit in mind. Consider the following while
-              setting your budget:
-            </p>
-            <ul>
-              <li>
-                <p>
-                  <strong>Components:</strong>&nbsp; Different components have
-                  varying price ranges. Research the prices of CPUs, graphics
-                  cards, motherboards, RAM, storage, power supplies, and PC
-                  cases to get an idea of their costs.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Features:</strong>&nbsp; Decide which features are
-                  essential for your purpose and prioritize them. Some
-                  components may offer extra features or performance at a higher
-                  cost, but you might not need them.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Upgradability:</strong>&nbsp; Consider if you want to
-                  leave room for future upgrades. This may influence your budget
-                  as you may choose to invest more in certain components that
-                  will last longer.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Peripherals:</strong>&nbsp; Don't forget to include
-                  the cost of peripherals like a monitor, keyboard, mouse, and
-                  speakers if you need them.
-                </p>
-              </li>
-            </ul>
-            <p>
-              By setting a budget, you'll have a clear idea of how much you can
-              spend on each component, making it easier to make informed
-              decisions and prevent overspending. It will also help you find the
-              best balance between performance and cost for your custom PC.
-            </p>
-
-            <h4>Step 3: Understanding PC Components</h4>
-
-            <ul>
-              <li>CPU</li>
-              <li>GPU</li>
-              <li>RAM</li>
-              <li>CPU</li>
-            </ul>
           </div>
         </div>
       </main>
