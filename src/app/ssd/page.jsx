@@ -4,7 +4,7 @@ export default function Ssd() {
     return (
         <>
             <div>
-
+                ssd page
             </div>
         </>
     )
