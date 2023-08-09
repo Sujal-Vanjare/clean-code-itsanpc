@@ -4,7 +4,7 @@ export default function Ram() {
     return (
         <>
             <div>
-
+                ram page
             </div>
         </>
     )

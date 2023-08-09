@@ -4,6 +4,7 @@ export default function Motherboard() {
     return (
         <>
             <div>
+                Motherboard page
 
             </div>
         </>
