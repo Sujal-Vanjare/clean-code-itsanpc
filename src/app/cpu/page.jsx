@@ -30,10 +30,14 @@ export default function Cpu() {
               Building A Complete Pc Setup
             </h4>
             <p>for a Complete setup you need </p>
-            <ul className={styles.ulCircle}>
+            <ul>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>PC</strong>
+                  <span><strong>PC</strong>
+                    <p>That's our computer, Consist of components like the CPU, GPU, RAM, and storage, etc. we are going to build that
+                    </p>
+                  </span>
+
 
                   <Image
                     className={styles.ulImage}
@@ -47,7 +51,11 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>Monitor</strong>
+                  <span>
+                    <strong>Monitor</strong>
+                    <p>Monitors come in various Screen sizes, Resolutions, Refresh Rate, Panel Technology, Color Accuracy, Curved or Flat Screen, Adaptive Sync Technologies like: NVIDIA G-Sync and AMD FreeSync </p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/monitor.png"
@@ -60,7 +68,10 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>Keyboard</strong>
+                  <span><strong>Keyboard</strong>
+                    <p>Keyboards come in different forms, catering to different needs like, Mechanical Keyboard, Standard Keyboard, Laptop Keyboard, Wireless Keyboard.</p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/keyboard.png"
@@ -73,7 +84,10 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>Mouse</strong>
+                  <span><strong>Mouse</strong>
+                    <p>Mouse come in various types like, Standard Mouse, Gaming Mouse, Wireless Mouse, Pen/Stylus Mouse, Multi-Button Mouse.</p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/mouse.png"
@@ -86,7 +100,10 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>Headphone</strong>
+                  <span><strong>Headphone</strong>
+                    <p>There are several types of headphones available, Over-Ear Headphones, On-Ear Headphones, Noise-Canceling Headphones, Wireless Headphones, Gaming Headsets.</p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/headphone.png"
@@ -106,15 +123,18 @@ export default function Cpu() {
             </ul>
 
             <h4>
-              <span className={styles.head2}>Lets dive into</span> Building A PC{" "}
+              <span className={styles.head2}>Lets dive into</span> Building A PC
             </h4>
-            <p>for a Pc build you need this Compopnents</p>
+            <p>for a Pc build you need this 7 Compopnents</p>
 
-            <ul className={styles.ulCircle}>
+            <ul>
               <li>
                 <p className={styles.itemImgList}>
                   <span>
-                    <strong>CPU</strong>
+                    <span><strong>CPU</strong>
+                      <p>CPU is the Brain of the Computer system<br /> There are two most prominent CPU manufacturers are Intel and AMD. Some CPUs have integrated graphics, while others require a separate dedicated graphics card. </p>
+                    </span>
+
                   </span>
                   <Image
                     className={styles.ulImage}
@@ -129,7 +149,11 @@ export default function Cpu() {
 
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>GPU</strong>
+                  <span>
+                    <strong>GPU</strong>
+                    <p>Graphic Card for advanced graphics processing<br /> If you're planning on gaming or using intensive graphics applications, then you need a dedicated GPU. If not then CPU integrated gpu is enough <br /> There are two main GPU chip producers that are  NVIDIA and AMD. <br /> in GPU there is Founder's Edition Cards and Normal Card like Asus, Msi, Gigabyte Card</p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/gpu.png"
@@ -142,7 +166,11 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>SSD</strong>
+                  <span>
+                    <strong>SSD</strong>
+                    <p>SSDs for Storage <br />There are several types of SSDs like M.2 SSD, NVMe SSD, SATA SSD, External SSD <br />  There are several reputable SSD brands like Samsung, Crucial, Western Digital, Kingston, etc. </p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/ssd1.png"
@@ -155,7 +183,13 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>RAM</strong>
+                  <span>
+                    <strong>RAM</strong>
+                    <p>
+                      The amount and speed of RAM directly impact a system's performance <br /> There are several reputable brands that manufacture high-quality RAM like  Corsair, G.Skill, Kingston, Crucial, etc.
+                    </p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/ram.png"
@@ -168,7 +202,16 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>Motherboard</strong>
+                  <span>
+                    <strong>Motherboard</strong>
+                    <p>
+                      Now we are going to plug all the part on to the Motherboard, so all the components will be communicate and interact <br />
+                      Motherboards come in various types and form factors such as ATX, Micro-ATX, and Mini-ITX.
+                      <br /> There are several motherboard brands in the market, like ASUS, MSI, Gigabyte, ASRock, EVGA
+                    </p>
+
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/motherboard.png"
@@ -181,7 +224,15 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>PSU</strong>
+                  <span>
+                    <strong>PSU</strong>
+                    <p>
+                      Now for all the component we need the power and that will provide by Power Supply Unit
+                      <br />
+                      Here are some well-known PSU brands Corsair, EVGA, Cooler Master, Be Quiet!, SilverStone ,etc
+                    </p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/psu.png"
@@ -194,7 +245,15 @@ export default function Cpu() {
               </li>
               <li>
                 <p className={styles.itemImgList}>
-                  <strong>Case</strong>
+                  <span>
+                    <strong>Case</strong>
+                    <p>
+                      case, also known as a chassis or tower <br />
+                      It will provide physical protection, cooling, and a place to organize and assemble the various parts of a computer system. <br />
+                      Computer cases come in different form factors that correspond to motherboard sizes, such as ATX, Micro-ATX, and Mini-ITX.
+                    </p>
+                  </span>
+
                   <Image
                     className={styles.ulImage}
                     src="/case.png"
@@ -204,6 +263,17 @@ export default function Cpu() {
                     priority
                   />
                 </p>
+              </li>
+            </ul>
+           
+            <h4>
+              <span className={styles.head2}>Define Your</span> Purpose to use PC  
+            </h4>
+            <p>Before you start building your custom PC, it's essential to understand what you want to use it for. This will guide your choices when selecting the components.
+            </p>
+            <ul>
+              <li>
+
               </li>
             </ul>
           </div>
