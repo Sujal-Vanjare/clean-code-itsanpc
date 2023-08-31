@@ -1,3 +1,5 @@
+@import 'normalize.css';
+
 *,
 *::after,
 *::before {
@@ -48,9 +50,9 @@ a {
 
   --row-bg: #141414;
   --tile-bg: #1d1d1f;
-  --card-hover-bg:rgba(255, 255, 255, 0.10);
+  --card-hover-bg: rgba(255, 255, 255, 0.10);
 
-  --focus-outline:  rgba(0, 102, 204, 0.76);
+  --focus-outline: rgba(0, 102, 204, 0.76);
   --date-text-color: #91918c;
 
 
@@ -91,7 +93,7 @@ a {
 
   --row-bg: #f5f5f7;
   --tile-bg: #fff;
-  --card-hover-bg:rgba(0,0,0,.08);
+  --card-hover-bg: rgba(0, 0, 0, .08);
 
   --focus-outline: rgba(41, 151, 255, 0.76);
   --date-text-color: #6e6e73;
