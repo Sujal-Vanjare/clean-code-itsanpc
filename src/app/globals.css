@@ -55,6 +55,14 @@ a {
   --focus-outline: rgba(0, 102, 204, 0.76);
   --date-text-color: #91918c;
 
+  --carousal-arrow-bg: rgba(255, 255, 255, 0.4);
+  --hover-arrow-bg: rgba(255, 255, 255, 0.6);
+
+  --carousal-pause-bg: rgba(255, 255, 255, 0.3);
+  --hover-pause-bg: rgba(255, 255, 255, 0.5);
+
+
+
 
 
 
@@ -98,6 +106,12 @@ a {
   --focus-outline: rgba(41, 151, 255, 0.76);
   --date-text-color: #6e6e73;
 
+  --carousal-arrow-bg: rgba(0, 0, 0, 0.6);
+  --hover-arrow-bg: rgba(0, 0, 0, 0.8);
+
+  --carousal-pause-bg: rgba(0, 0, 0, 0.5);
+  --hover-pause-bg: rgba(0, 0, 0, 0.7);
+
 
 
 
@@ -113,4 +127,12 @@ a {
 
 .container {
   background: var(--main-bg);
+}
+
+
+/* Top Carousal dot style  */
+.carousel .control-dots .dot {
+  background: var(--main-color) !important;
+
+
 }

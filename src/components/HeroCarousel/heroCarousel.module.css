@@ -1,0 +1,141 @@
+.container {
+    position: relative;
+    max-width: 1240px;
+    margin: auto;
+}
+
+
+.carouselImage {
+    width: 100%;
+    height: auto;
+}
+
+.carouselText {
+    position: absolute;
+    left: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    bottom: 75px;
+    color: 30px;
+}
+
+.pauseButton {
+    display: flex;
+    position: absolute;
+    right: 100px;
+    bottom: 14px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--carousal-pause-bg);
+    cursor: pointer;
+
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    user-select: none;
+
+}
+
+.prevArrow {
+    display: flex;
+    position: absolute;
+    right: 54px;
+    bottom: 12px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--carousal-arrow-bg);
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+
+    user-select: none;
+
+
+}
+
+.nextArrow {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--carousal-arrow-bg);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+
+    user-select: none;
+
+}
+
+.prevArrow img,
+.nextArrow img {
+    width: auto;
+
+}
+
+
+.pauseButton:hover {
+    background-color: var(--hover-pause-bg);
+}
+
+.nextArrow:hover,
+.prevArrow:hover {
+    background-color: var(--hover-arrow-bg);
+}
+
+@media (max-width: 768px) {
+
+    .carouselImage {
+        object-fit: cover;
+        aspect-ratio: 16/10;
+    }
+
+    .carouselText {
+        bottom: 25px;
+        color: 15px;
+    }
+
+    .pauseButton {
+        right: 78px;
+        width: 26px;
+        height: 26px;
+        bottom: 13px;
+
+
+    }
+
+    .prevArrow {
+        right: 44px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .nextArrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .pauseButton img {
+        width: 10px;
+        height: auto;
+    }
+
+    .prevArrow img,
+    .nextArrow img {
+        width: 11px;
+        height: auto;
+
+    }
+
+}
