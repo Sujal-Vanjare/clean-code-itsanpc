@@ -1,47 +1,130 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./sidebarHighlight.module.css";
 
 function scrollToContentSection(sectionId) {
   const contentSection = document.getElementById(sectionId);
   if (contentSection) {
-    contentSection.scrollIntoView({ behavior: "smooth" });
+    const topOffset = contentSection.offsetTop - 20;
+    window.scrollTo({ top: topOffset, behavior: "smooth" });
   }
 }
 
 const SidebarHighlight = () => {
+  const [activeSection, setActiveSection] = useState(null);
+  const [threshold, setThreshold] = useState(0.7); // Default threshold
+
   useEffect(() => {
     const sidebarItems = document.querySelectorAll(`.${styles.parent_item}`);
+
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: "0px",
+      threshold: threshold, // Use the dynamic threshold
+    };
+
+    const intersectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
     sidebarItems.forEach((item) => {
+      const sectionId = item.id;
+      const contentSection = document.getElementById(sectionId);
+      if (contentSection) {
+        intersectionObserver.observe(contentSection);
+      }
+
       item.addEventListener("click", () => {
-        const sectionId = item.id;
         scrollToContentSection(sectionId);
       });
     });
+
+    // Clean up the observer
+    return () => {
+      intersectionObserver.disconnect();
+    };
+  }, [threshold]); // Re-run the effect when the threshold changes
+
+  // Adjust the threshold value based on screen height
+  useEffect(() => {
+    const handleResize = () => {
+      // Get the current screen height
+      const screenHeight = window.innerHeight;
+
+      // Define threshold values for different screen height categories
+      let newThreshold = 0.7; // Default threshold
+
+      // Adjust threshold based on screen height
+      if (screenHeight <= 600) {
+        newThreshold = 0.3; // Extra small screens (e.g., mobile phones)
+      } else if (screenHeight <= 900) {
+        newThreshold = 0.4; // Small screens (e.g., small laptops)
+      } else if (screenHeight <= 1200) {
+        newThreshold = 0.5; // Medium screens (e.g., standard laptops)
+      } else {
+        newThreshold = 0.7; // Large screens (e.g., large desktop monitors)
+      }
+
+      // Update the threshold
+      setThreshold(newThreshold);
+    };
+
+    // Initial call to set the threshold based on the screen height
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
   return (
     <div className={styles.floating_right_aside}>
       <div className={styles.high_on_this_page}>
         <ul className={styles.items}>
           <li
-            className={styles.parent_item}
+            className={`${styles.parent_item} ${
+              activeSection === "what-you-need-for-complete-pc-setup-section"
+                ? styles.active
+                : ""
+            }`}
             id="what-you-need-for-complete-pc-setup-section"
           >
             What you need for Complete Pc Setup
           </li>
           <li
-            className={styles.parent_item}
+            className={`${styles.parent_item} ${
+              activeSection === "understanding-pc-component-section"
+                ? styles.active
+                : ""
+            }`}
             id="understanding-pc-component-section"
           >
             Understanding PC Component
           </li>
           <li
-            className={styles.parent_item}
+            className={`${styles.parent_item} ${
+              activeSection === "identifying-your-needs-section"
+                ? styles.active
+                : ""
+            }`}
             id="identifying-your-needs-section"
           >
             Identifying Your Needs
           </li>
-          <li className={styles.parent_item} id="set-a-budget-section">
+          <li
+            className={`${styles.parent_item} ${
+              activeSection === "set-a-budget-section" ? styles.active : ""
+            }`}
+            id="set-a-budget-section"
+          >
             Set a Budget
           </li>
         </ul>

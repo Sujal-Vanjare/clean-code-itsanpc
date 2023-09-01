@@ -33,7 +33,7 @@ export default function Cpu() {
               <p>for a Complete setup you need </p>
               <ul>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>PC</strong>
                       <p>
@@ -50,10 +50,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>Monitor</strong>
                       <p>
@@ -72,10 +72,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>Keyboard</strong>
                       <p>
@@ -93,10 +93,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>Mouse</strong>
                       <p>
@@ -114,10 +114,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>Headphone</strong>
                       <p>
@@ -135,7 +135,7 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
                   <p>
@@ -154,7 +154,7 @@ export default function Cpu() {
 
               <ul>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <span>
                         <strong>CPU</strong>
@@ -175,11 +175,11 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
 
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <span>
                         <strong>CPU Cooler</strong>
@@ -201,11 +201,11 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
 
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>GPU</strong>
                       <p>
@@ -227,10 +227,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>SSD</strong>
                       <p>
@@ -250,10 +250,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>RAM</strong>
                       <p>
@@ -272,10 +272,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>Motherboard</strong>
                       <p>
@@ -297,10 +297,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>PSU</strong>
                       <p>
@@ -320,10 +320,10 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
                 <li>
-                  <p className={styles.itemImgList}>
+                  <div className={styles.itemImgList}>
                     <span>
                       <strong>Case</strong>
                       <p>
@@ -345,7 +345,7 @@ export default function Cpu() {
                       height={675}
                       priority
                     />
-                  </p>
+                  </div>
                 </li>
               </ul>
             </section>

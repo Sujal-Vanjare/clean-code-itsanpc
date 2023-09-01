@@ -37,6 +37,7 @@ const HeroCarousel = (props) => {
             <Image
               className={styles.carouselImage}
               src={image}
+              alt="carousel image"
               width={1200}
               height={525}
             />

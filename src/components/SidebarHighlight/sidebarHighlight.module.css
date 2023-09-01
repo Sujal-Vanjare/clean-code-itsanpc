@@ -22,10 +22,15 @@
     color: var(--main-text-color);
     opacity: 0.75;
 
-    border-left: 1px solid var(--main-text-color);
+    border-left: 1px solid var(--sidebar-border);
 
 }
 
-.parent_item:hover {
+
+
+.active {
     opacity: 1;
+    font-weight: 500;
+    border-left: 1px solid var(--main-color);
+    transition: all 0.3s ease;
 }

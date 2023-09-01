@@ -1,38 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 
 export default function Navbar() {
-  // navbar scroll hide, and show
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [show, setShow] = useState("translate-y-0");
-  const [mobileMenu, setMobileMenu] = useState(false);
-
-  const controlNavbar = () => {
-    if (window.scrollY > 200) {
-      if (window.scrollY > lastScrollY && !mobileMenu) {
-        setShow("-translate-y-[80px]");
-      } else {
-        setShow("shadow-sm");
-      }
-    } else {
-      setShow("translate-y-0");
-    }
-    setLastScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-    };
-  }, [lastScrollY]);
-
-  //end
-
   const [isHide, setIsHide] = useState(true);
   const desktopSearchHideClass = () => {
     setIsHide(false);
