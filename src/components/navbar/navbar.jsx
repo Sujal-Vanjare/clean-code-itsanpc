@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isHide, setIsHide] = useState(true);
   const desktopSearchHideClass = () => {
     setIsHide(false);
@@ -30,6 +32,7 @@ export default function Navbar() {
   const cancelMobileSearchActiveClass = () => {
     setSearchActive(true);
   };
+  console.log(pathname);
 
   return (
     <>
@@ -74,32 +77,79 @@ export default function Navbar() {
                 searchActive ? "" : styles.move_down
               } `}
             >
-              <li>
-                <Link href="/" className={styles.link_logo}></Link>
+              <li className={pathname === "/" ? styles.pageActive : ""}>
+                <Link
+                  href="/"
+                  className={`${styles.link_logo} ${
+                    pathname === "/" ? styles.pageActive : ""
+                  }`}
+                ></Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/">PC Build</Link>
+                <Link
+                  href="/"
+                  className={pathname === "/" ? styles.pageActive : ""}
+                >
+                  PC Build
+                </Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/cpu">CPU</Link>
+                <Link
+                  href="/cpu"
+                  className={pathname === "/cpu" ? styles.pageActive : ""}
+                >
+                  CPU
+                </Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/gpu">GPU</Link>
+                <Link
+                  href="/gpu"
+                  className={pathname === "/gpu" ? styles.pageActive : ""}
+                >
+                  GPU
+                </Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/ssd">SSD</Link>
+                <Link
+                  href="/ssd"
+                  className={pathname === "/ssd" ? styles.pageActive : ""}
+                >
+                  SSD
+                </Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/ram">RAM</Link>
+                <Link
+                  href="/ram"
+                  className={pathname === "/ram" ? styles.pageActive : ""}
+                >
+                  RAM
+                </Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/motherboard">Motherboard</Link>
+                <Link
+                  href="/motherboard"
+                  className={
+                    pathname === "/motherboard" ? styles.pageActive : ""
+                  }
+                >
+                  Motherboard
+                </Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/psu">PSU</Link>
+                <Link
+                  href="/psu"
+                  className={pathname === "/psu" ? styles.pageActive : ""}
+                >
+                  PSU
+                </Link>
               </li>
               <li onClick={removeMobileNavActiveClass}>
-                <Link href="/monitor">Monitor</Link>
+                <Link
+                  href="/monitor"
+                  className={pathname === "/monitor" ? styles.pageActive : ""}
+                >
+                  Monitor
+                </Link>
               </li>
               <li className={styles.darkBtn}>
                 <DarkModeToggle />
@@ -109,7 +159,12 @@ export default function Navbar() {
                 <div className={styles.link_search}></div>
               </li>
               <li>
-                <Link href="/support" className={styles.link_donate}></Link>
+                <Link
+                  href="/support"
+                  className={`${styles.link_donate} ${
+                    pathname === "/support" ? styles.pageActive : ""
+                  }`}
+                ></Link>
               </li>
             </ul>
           </nav>

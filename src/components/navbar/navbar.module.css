@@ -44,6 +44,11 @@ nav .desktop_nav li .link_search:hover {
     opacity: 1;
 }
 
+nav .desktop_nav li .pageActive {
+    font-weight: 600;
+    opacity: 1;
+}
+
 .link_logo {
     background-image: url('/itsanpc-icon.svg');
     display: block;
