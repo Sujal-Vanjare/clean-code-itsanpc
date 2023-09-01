@@ -1,0 +1,31 @@
+/* Sidebar */
+
+
+.floating_right_aside {
+    width: 210px;
+    height: 100%;
+    margin-top: 120px;
+    position: sticky;
+    top: 120px;
+}
+
+.items {
+    list-style: none;
+}
+
+.parent_item {
+    padding: 2.5px 0 2.5px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    color: var(--main-text-color);
+    opacity: 0.75;
+
+    border-left: 1px solid var(--main-text-color);
+
+}
+
+.parent_item:hover {
+    opacity: 1;
+}

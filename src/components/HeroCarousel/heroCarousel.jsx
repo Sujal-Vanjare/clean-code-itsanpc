@@ -5,7 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import { useState } from "react";
 
-const HeroCarousel = () => {
+const HeroCarousel = (props) => {
   const [autoplay, setAutoplay] = useState(true);
 
   const toggleAutoplay = () => {
@@ -32,36 +32,17 @@ const HeroCarousel = () => {
           </div>
         )}
       >
-        <div>
-          <Image
-            className={styles.carouselImage}
-            src="/16-7-img.png"
-            width={1200}
-            height={525}
-            alt="image"
-          />
-          <div className={styles.carouselText}>Shop now</div>
-        </div>
-        <div>
-          <Image
-            className={styles.carouselImage}
-            src="/16-7-img.png"
-            width={1200}
-            height={525}
-            alt="image"
-          />
-          <div className={styles.carouselText}>Shop now</div>
-        </div>
-        <div>
-          <Image
-            className={styles.carouselImage}
-            src="/16-7-img.png"
-            width={1200}
-            height={525}
-            alt="image"
-          />
-          <div className={styles.carouselText}>Shop now</div>
-        </div>
+        {props.images.map((image, index) => (
+          <div key={index}>
+            <Image
+              className={styles.carouselImage}
+              src={image}
+              width={1200}
+              height={525}
+            />
+            <div className={styles.carouselText}>Shop now</div>
+          </div>
+        ))}
       </Carousel>
 
       <div className={styles.pauseButton} onClick={toggleAutoplay}>

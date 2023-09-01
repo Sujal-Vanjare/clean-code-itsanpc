@@ -7,11 +7,18 @@ import Link from "next/link";
 import HeroCarousel from "@/components/HeroCarousel/heroCarousel";
 
 export default function Home() {
+  const carouselImages = [
+    "/16-7-img.png",
+    "/16-7-img2.png",
+    "/16-7-img3.png",
+    "/16-7-img.png",
+    // Add more image URLs as needed
+  ];
   return (
     <>
       <div className={styles.page}>
         <section className={styles.topSection}>
-          <HeroCarousel />
+          <HeroCarousel images={carouselImages} />
         </section>
 
         <section className={styles.section}>
