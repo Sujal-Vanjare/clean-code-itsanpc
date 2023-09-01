@@ -36,7 +36,7 @@ const HeroCarousel = (props) => {
           <div key={index}>
             <Image
               className={styles.carouselImage}
-              src={image}
+              src={`/${image}`}
               alt="carousel image"
               width={1200}
               height={525}

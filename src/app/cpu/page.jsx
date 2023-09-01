@@ -3,6 +3,24 @@ import styles from "./page.module.css";
 import Image from "next/image";
 
 export default function Cpu() {
+  const sections = [
+    {
+      id: "1",
+      title: " Building A Complete Pc Setup",
+    },
+    {
+      id: "2",
+      title: "Understanding PC Component",
+    },
+    {
+      id: "3",
+      title: "Identifying Your Needs",
+    },
+    {
+      id: "4",
+      title: "Set a Budget",
+    },
+  ];
   return (
     <>
       <main className={styles.page}>
@@ -25,7 +43,7 @@ export default function Cpu() {
               height={675}
               priority
             />
-            <section id="what-you-need-for-complete-pc-setup-section">
+            <section id="1">
               <h4 className={styles.firstP}>
                 <span className={styles.head2}>Lets get straight into</span>
                 Building A Complete Pc Setup
@@ -146,7 +164,7 @@ export default function Cpu() {
               </ul>
             </section>
 
-            <section id="understanding-pc-component-section">
+            <section id="2">
               <h4>
                 <span className={styles.head2}>Understanding </span>PC Component
               </h4>
@@ -350,7 +368,7 @@ export default function Cpu() {
               </ul>
             </section>
 
-            <section id="identifying-your-needs-section">
+            <section id="3">
               <h4>
                 <span className={styles.head2}>Identifying Your </span>Needs
               </h4>
@@ -408,7 +426,7 @@ export default function Cpu() {
               </p>
             </section>
 
-            <section id="set-a-budget-section">
+            <section id="4">
               <h4>
                 <span className={styles.head2}>Set a </span>Budget
               </h4>
@@ -434,7 +452,7 @@ export default function Cpu() {
               </ul>
             </section>
           </div>
-          <SidebarHighlight />
+          <SidebarHighlight sections={sections} />
         </div>
       </main>
     </>

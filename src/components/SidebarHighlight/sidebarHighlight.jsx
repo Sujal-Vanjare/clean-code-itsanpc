@@ -5,12 +5,12 @@ import styles from "./sidebarHighlight.module.css";
 function scrollToContentSection(sectionId) {
   const contentSection = document.getElementById(sectionId);
   if (contentSection) {
-    const topOffset = contentSection.offsetTop - 20;
+    const topOffset = contentSection.offsetTop - 29;
     window.scrollTo({ top: topOffset, behavior: "smooth" });
   }
 }
 
-const SidebarHighlight = () => {
+const SidebarHighlight = (props) => {
   const [activeSection, setActiveSection] = useState(null);
   const [threshold, setThreshold] = useState(0.7); // Default threshold
 
@@ -89,44 +89,17 @@ const SidebarHighlight = () => {
     <div className={styles.floating_right_aside}>
       <div className={styles.high_on_this_page}>
         <ul className={styles.items}>
-          <li
-            className={`${styles.parent_item} ${
-              activeSection === "what-you-need-for-complete-pc-setup-section"
-                ? styles.active
-                : ""
-            }`}
-            id="what-you-need-for-complete-pc-setup-section"
-          >
-            What you need for Complete Pc Setup
-          </li>
-          <li
-            className={`${styles.parent_item} ${
-              activeSection === "understanding-pc-component-section"
-                ? styles.active
-                : ""
-            }`}
-            id="understanding-pc-component-section"
-          >
-            Understanding PC Component
-          </li>
-          <li
-            className={`${styles.parent_item} ${
-              activeSection === "identifying-your-needs-section"
-                ? styles.active
-                : ""
-            }`}
-            id="identifying-your-needs-section"
-          >
-            Identifying Your Needs
-          </li>
-          <li
-            className={`${styles.parent_item} ${
-              activeSection === "set-a-budget-section" ? styles.active : ""
-            }`}
-            id="set-a-budget-section"
-          >
-            Set a Budget
-          </li>
+          {props.sections.map((section) => (
+            <li
+              className={`${styles.parent_item} ${
+                activeSection === section.id ? styles.active : ""
+              }`}
+              id={section.id}
+              key={section.id}
+            >
+              {section.title}
+            </li>
+          ))}
         </ul>
       </div>
     </div>
