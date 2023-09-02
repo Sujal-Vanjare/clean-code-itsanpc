@@ -25,7 +25,7 @@ export default function Home() {
           <BlogCardSection
             sectionHead="Latest Blogs"
             sectionHead2="check this out!"
-            firstHref=""
+            firstHref="/pcbuildguide"
             firstImg="pc-setup.png"
             firstCateg="pc setup"
             firstHead="Best Pc Setup under $2000"

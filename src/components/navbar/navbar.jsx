@@ -32,7 +32,6 @@ export default function Navbar() {
   const cancelMobileSearchActiveClass = () => {
     setSearchActive(true);
   };
-  console.log(pathname);
 
   return (
     <>
