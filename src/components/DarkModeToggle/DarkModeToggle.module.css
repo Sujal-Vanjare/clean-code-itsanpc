@@ -1,39 +1,39 @@
-.container{
-    width: 38px;
-    height: 20px;
-    border: 1.5px solid gray;
-    border-radius: 11px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2px;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .iconMoon {
-    background-image: url('/moon.svg');
-    display: block;
-    background-position: center;
-    background-size: 13px;
-    height: 14px;
-    width: 14px;
-    background-repeat: no-repeat;
-  }
-  .iconSun {
-    background-image: url('/sun.svg');
-    display: block;
-    background-position: center;
-    background-size: 13px;
-    height: 14px;
-    width: 14px;
-    background-repeat: no-repeat;
-  }
-  
-  .ball{
-    width: 14px;
-    height: 14px;
-    background-color: #808080;
-    border-radius: 50%;
-    position: absolute;
-  }  
+.container {
+  width: 38px;
+  height: 20px;
+  border: 1.5px solid gray;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.iconMoon {
+  background-image: url("/moon.svg");
+  display: block;
+  background-position: center;
+  background-size: 13px;
+  height: 14px;
+  width: 14px;
+  background-repeat: no-repeat;
+}
+.iconSun {
+  background-image: url("/sun.svg");
+  display: block;
+  background-position: center;
+  background-size: 13px;
+  height: 14px;
+  width: 14px;
+  background-repeat: no-repeat;
+}
+
+.ball {
+  width: 14px;
+  height: 14px;
+  background-color: #808080;
+  border-radius: 50%;
+  position: absolute;
+}
