@@ -1,141 +1,177 @@
 .container {
-    position: relative;
-    max-width: 1240px;
-    margin: auto;
+  position: relative;
+  max-width: 1240px;
+  margin: auto;
 }
 
-
 .carouselImage {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 .carouselText {
-    position: absolute;
-    left: 0;
-    font-weight: 500;
-    text-transform: uppercase;
-    background-color: #ffffff;
-    cursor: pointer;
+  position: absolute;
+  left: 36px;
+  bottom: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 
-    bottom: 75px;
-    color: 30px;
+  width: fit-content;
+  height: fit-content;
+  padding: 16px 48px 16px 20px;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #f5f5f7;
+
+  cursor: pointer;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.28577;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.seeMore {
+  margin-top: 12px;
+  color: var(--link-color);
+  font-size: 17px;
+  line-height: 1.23536;
+  font-weight: 400;
+  letter-spacing: 0.011em;
+}
+
+.carouselText:hover .seeMore {
+  text-decoration: underline;
+}
+
+.arrow {
+  padding-left: 5.1px;
+  height: 11px;
+  width: auto;
 }
 
 .pauseButton {
-    display: flex;
-    position: absolute;
-    right: 100px;
-    bottom: 14px;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--carousal-pause-bg);
-    cursor: pointer;
+  display: flex;
+  position: absolute;
+  right: 100px;
+  bottom: 14px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--carousal-pause-bg);
+  cursor: pointer;
 
-    width: 36px;
-    height: 36px;
-    border-radius: 100%;
-    user-select: none;
-
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  user-select: none;
 }
 
 .prevArrow {
-    display: flex;
-    position: absolute;
-    right: 54px;
-    bottom: 12px;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--carousal-arrow-bg);
-    cursor: pointer;
+  display: flex;
+  position: absolute;
+  right: 54px;
+  bottom: 12px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--carousal-arrow-bg);
+  cursor: pointer;
 
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
 
-    user-select: none;
-
-
+  user-select: none;
 }
 
 .nextArrow {
-    display: flex;
-    position: absolute;
-    right: 12px;
-    bottom: 12px;
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--carousal-arrow-bg);
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
+  display: flex;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--carousal-arrow-bg);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
 
-    user-select: none;
-
+  user-select: none;
 }
 
 .prevArrow img,
 .nextArrow img {
-    width: auto;
-
+  width: auto;
 }
 
-
 .pauseButton:hover {
-    background-color: var(--hover-pause-bg);
+  background-color: var(--hover-pause-bg);
 }
 
 .nextArrow:hover,
 .prevArrow:hover {
-    background-color: var(--hover-arrow-bg);
+  background-color: var(--hover-arrow-bg);
+}
+
+@media (max-width: 1260px) {
+  .carouselImage {
+    border-radius: 0px;
+  }
 }
 
 @media (max-width: 768px) {
+  .carouselImage {
+    object-fit: cover;
+    aspect-ratio: 16/10;
+  }
 
-    .carouselImage {
-        object-fit: cover;
-        aspect-ratio: 16/10;
-    }
+  .carouselText {
+    bottom: 25px;
+    color: 15px;
+  }
 
-    .carouselText {
-        bottom: 25px;
-        color: 15px;
-    }
+  .pauseButton {
+    right: 78px;
+    width: 26px;
+    height: 26px;
+    bottom: 13px;
+  }
 
-    .pauseButton {
-        right: 78px;
-        width: 26px;
-        height: 26px;
-        bottom: 13px;
+  .prevArrow {
+    right: 44px;
+    width: 30px;
+    height: 30px;
+  }
 
+  .nextArrow {
+    width: 30px;
+    height: 30px;
+  }
 
-    }
+  .pauseButton img {
+    width: 10px;
+    height: auto;
+  }
 
-    .prevArrow {
-        right: 44px;
-        width: 30px;
-        height: 30px;
-    }
-
-    .nextArrow {
-        width: 30px;
-        height: 30px;
-    }
-
-    .pauseButton img {
-        width: 10px;
-        height: auto;
-    }
-
-    .prevArrow img,
-    .nextArrow img {
-        width: 11px;
-        height: auto;
-
-    }
-
+  .prevArrow img,
+  .nextArrow img {
+    width: 11px;
+    height: auto;
+  }
 }

@@ -20,7 +20,6 @@ export const ThemeProvider = ({ children }) => {
     }
   }, []);
 
-
   const toggle = () => {
     const newTheme = mode === "dark" ? "light" : "dark";
     setMode(newTheme);

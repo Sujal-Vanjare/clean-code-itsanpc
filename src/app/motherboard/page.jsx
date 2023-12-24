@@ -1,13 +1,5 @@
 import styles from "./page.module.css";
 
-export default function Motherboard() {
-    return (
-        <>
-            <div>
-                Motherboard page
-
-            </div>
-        </>
-    )
-
+export default function Page() {
+  return <div className={styles.page}>Motherboard page</div>;
 }

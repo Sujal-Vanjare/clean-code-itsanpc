@@ -1,24 +1,24 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 
 import BlogCardSection from "@/components/BlogCardSection/blogCardSection";
 import ItemCardSection from "@/components/ItemCardSection/itemCardSection";
-import Link from "next/link";
 import HeroCarousel from "@/components/HeroCarousel/heroCarousel";
+import { fetchDataFromApi } from "@/utils/api";
 
-export default function Home() {
-  const carouselImages = [
-    "16-7-img.png",
-    "16-7-img2.png",
-    "16-7-img3.png",
-    "16-7-img.png",
-    // Add more image URLs as needed
-  ];
+export async function getCarousalBlog() {
+  const data = await fetchDataFromApi("/api/pages/4?populate=*");
+
+  return data;
+}
+
+export default async function Page() {
+  const CarousalBlog = await getCarousalBlog();
+
   return (
     <>
       <div className={styles.page}>
         <section className={styles.topSection}>
-          <HeroCarousel images={carouselImages} />
+          <HeroCarousel data={CarousalBlog.data.attributes.blogs.data} />
         </section>
 
         <section className={styles.section}>

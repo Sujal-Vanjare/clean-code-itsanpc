@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const HeroCarousel = (props) => {
   const [autoplay, setAutoplay] = useState(true);
@@ -32,17 +33,23 @@ const HeroCarousel = (props) => {
           </div>
         )}
       >
-        {props.images.map((image, index) => (
-          <div key={index}>
+        {props.data.map((data, index) => (
+          <Link href={`/blog/${data.attributes.slug}`} key={index}>
             <Image
               className={styles.carouselImage}
-              src={`/${image}`}
+              src={data.attributes.thumbnail_img_url}
               alt="carousel image"
-              width={1200}
-              height={525}
+              width={1416}
+              height={619}
+              priority
             />
-            <div className={styles.carouselText}>Shop now</div>
-          </div>
+            <div className={styles.carouselText}>
+              <h2 className={styles.title}>{data.attributes.title}</h2>
+              <p className={styles.subtitle}>{data.attributes.subtitle}</p>
+
+              <p className={styles.seeMore}>See more</p>
+            </div>
+          </Link>
         ))}
       </Carousel>
 

@@ -11,6 +11,12 @@ function scrollToContentSection(sectionId) {
 }
 
 const SidebarHighlight = (props) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const visibleButton = () => {
+    setIsVisible(!isVisible);
+  };
+
   const [activeSection, setActiveSection] = useState(null);
   const [threshold, setThreshold] = useState(0.7); // Default threshold
 
@@ -86,8 +92,26 @@ const SidebarHighlight = (props) => {
   }, []);
 
   return (
-    <div className={styles.floating_right_aside}>
-      <div className={styles.high_on_this_page}>
+    <aside className={styles.floating_right_aside}>
+      <div
+        className={`${styles.highlight_button}  ${
+          isVisible ? styles.btnActive : ""
+        } `}
+        onClick={visibleButton}
+      >
+        <div className={styles.icon}>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+        </div>
+        <div className={styles.icontxt}>Highlights</div>
+      </div>
+
+      <div
+        className={`${styles.high_on_this_page}  ${
+          isVisible ? "" : styles.visible
+        } `}
+      >
         <ul className={styles.items}>
           {props.sections.map((section) => (
             <li
@@ -102,7 +126,7 @@ const SidebarHighlight = (props) => {
           ))}
         </ul>
       </div>
-    </div>
+    </aside>
   );
 };
 

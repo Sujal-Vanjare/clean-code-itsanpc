@@ -1,13 +1,5 @@
 import styles from "./page.module.css";
 
-export default function Monitor() {
-    return (
-        <>
-            <div>
-                monitor page
-                
-            </div>
-        </>
-    )
-
+export default function Page() {
+  return <div className={styles.page}>monitor page</div>;
 }

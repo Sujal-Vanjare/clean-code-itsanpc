@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  height: 21px;
+}
+
+.container button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+}
+.icon {
+  width: 21px;
+  height: 21px;
+  opacity: 0.6;
+  filter: var(--like-icon);
+}
+
+.container button:hover .icon {
+  opacity: 1;
+}
+.msg {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  width: 150px;
+  height: 34px;
+  padding: 6px;
+  text-align: center;
+  background-color: var(--main-text-color); /* Green background color */
+  color: var(--main-bg);
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.container p {
+  font-size: 14px;
+}

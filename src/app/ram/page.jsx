@@ -1,12 +1,5 @@
 import styles from "./page.module.css";
 
-export default function Ram() {
-    return (
-        <>
-            <div>
-                ram page
-            </div>
-        </>
-    )
-
+export default function Page() {
+  return <div className={styles.page}>ram page</div>;
 }

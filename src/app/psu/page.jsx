@@ -1,13 +1,5 @@
 import styles from "./page.module.css";
 
-export default function Psu() {
-    return (
-        <>
-            <div>
-                psu page
-                
-            </div>
-        </>
-    )
-
+export default function Page() {
+  return <div className={styles.page}>psu page</div>;
 }

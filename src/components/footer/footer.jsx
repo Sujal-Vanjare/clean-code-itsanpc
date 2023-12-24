@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./footer.module.css";
+import Image from "next/image";
 
 export default function footer() {
   return (
@@ -7,7 +8,13 @@ export default function footer() {
       <div className={styles.footerContainer}>
         <footer className={styles.footer}>
           <div>
-            <img className={styles.webIcon} src="itsanpc-icon.svg" alt="" />
+            <Image
+              src="/itsanpc-icon.svg"
+              width={20}
+              height={20}
+              alt="website icon"
+              className={styles.webIcon}
+            />
           </div>
           <div className={styles.summary}>
             Discover the best PC parts for your ultimate build. Expert
@@ -36,16 +43,34 @@ export default function footer() {
 
           <div className={styles.socialMedia}>
             <div className={styles.socialMediaLinks}>
-              <div className={styles.followUs}>Follow us</div>
+              <div className={styles.followUs}>Follow us on</div>
 
               <Link href="">
-                <img className={styles.icons} src="twitterLogo.svg" alt="" />
+                <Image
+                  className={styles.icons}
+                  src="/twittx.svg"
+                  width={48}
+                  height={48}
+                  alt="twitter icon"
+                />
               </Link>
               <Link href="">
-                <img className={styles.icons} src="youtubeLogo.svg" alt="" />
+                <Image
+                  className={styles.icons}
+                  src="/youtube.svg"
+                  width={48}
+                  height={48}
+                  alt="youtube icon"
+                />
               </Link>
               <Link href="">
-                <img className={styles.icons} src="instagramLogo.svg" alt="" />
+                <Image
+                  className={styles.icons}
+                  src="/instagram.svg"
+                  width={48}
+                  height={48}
+                  alt="youtube icon"
+                />
               </Link>
             </div>
           </div>
@@ -57,7 +82,7 @@ export default function footer() {
               <div className={styles.support}>
                 <img
                   className={styles.donateIcon}
-                  src="donate-icon.svg"
+                  src="/donate-icon.svg"
                   alt=""
                 />
                 Donate & Support

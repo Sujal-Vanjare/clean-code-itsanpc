@@ -1,3 +1,4 @@
-.page{
-    padding-top: 45px;
+.page {
+  padding-top: 45px;
+  color: var(--main-color);
 }

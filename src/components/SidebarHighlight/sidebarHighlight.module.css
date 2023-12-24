@@ -1,37 +1,102 @@
 /* Sidebar */
 
-
 .floating_right_aside {
-    width: 210px;
-    height: 100%;
-    margin-top: 120px;
-    position: sticky;
-    top: 120px;
+  width: 210px;
+  height: fit-content;
+  margin-top: 120px;
+  position: sticky;
+  top: 120px;
 }
 
 .items {
-    list-style: none;
+  list-style: none;
 }
 
 .parent_item {
-    padding: 2.5px 0 2.5px 10px;
-    font-size: 13px;
-    line-height: 1.5;
-    font-weight: 400;
-    letter-spacing: -.01em;
-    color: var(--main-text-color);
-    opacity: 0.75;
-    cursor: pointer;
+  padding: 2.5px 0 2.5px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--main-text-color);
+  opacity: 0.75;
+  cursor: pointer;
 
-    border-left: 1px solid var(--sidebar-border);
-
+  border-left: 1px solid var(--sidebar-border);
 }
 
-
-
 .active {
-    opacity: 1;
-    font-weight: 500;
-    border-left: 1px solid var(--main-color);
-    transition: all 0.3s ease;
+  opacity: 1;
+  font-weight: 500;
+  border-left: 1px solid var(--main-color);
+  transition: all 0.3s ease;
+}
+
+.highlight_button {
+  display: none;
+}
+
+/*  */
+@media only screen and (max-width: 1023px) {
+  .floating_right_aside {
+    margin-top: 55px;
+    margin-right: 10px;
+    width: 260px;
+  }
+  .highlight_button {
+    margin-left: auto;
+    width: 160px;
+    height: 48px;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid var(--nav-border);
+    background-color: var(--nav-container-bg);
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .icontxt {
+    font-size: 14px;
+    text-align: center;
+  }
+  .line {
+    width: 22px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: var(--main-color);
+    opacity: 0.8;
+  }
+
+  .high_on_this_page {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: var(--like-bg);
+    border-radius: 14px;
+  }
+
+  .highlight_button:active {
+    opacity: 0.6;
+  }
+
+  .visible {
+    display: none;
+  }
+
+  .btnActive .icontxt {
+    font-weight: 700;
+  }
+  .btnActive .icon {
+    gap: 4px;
+  }
+  .btnActive .line {
+    height: 3px;
+  }
 }

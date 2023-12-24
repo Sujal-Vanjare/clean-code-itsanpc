@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  width: fit-content;
+  height: 36px;
+  background-color: var(--like-bg);
+  border-radius: 18px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.border {
+  width: 1px;
+  height: 24px;
+  background-color: var(--like-border);
+}
+
+.likes,
+.dislikes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 0 12px;
+  height: 100%;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.likeText {
+  font-size: 14px;
+  padding-bottom: 2rpx;
+}
+
+.icon {
+  height: 22px;
+  width: auto;
+  opacity: 0.8;
+  filter: var(--like-icon);
+}
+
+.likes:hover,
+.dislikes:hover {
+  background-color: var(--like-hover);
+}
