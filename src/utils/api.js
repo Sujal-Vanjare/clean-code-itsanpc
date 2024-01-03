@@ -11,10 +11,10 @@ export async function fetchDataFromApi(endpoints) {
 
   const res = await fetch(`${API_URL}${endpoints}`, options);
 
-  // if (!res.ok) {
-  //   // This will activate the closest `error.js` Error Boundary
-  //   throw new Error("Failed to fetch data");
-  // }
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
 
   const data = await res.json();
   return data;

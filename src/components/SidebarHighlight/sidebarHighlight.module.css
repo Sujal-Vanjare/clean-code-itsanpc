@@ -46,11 +46,11 @@
   .highlight_button {
     margin-left: auto;
     width: 160px;
-    height: 48px;
+    height: 44px;
     display: flex;
     gap: 18px;
     align-items: center;
-    padding: 14px;
+    padding: 0px 14px;
     border-radius: 8px;
     cursor: pointer;
     border: 1px solid var(--nav-border);
@@ -58,28 +58,23 @@
   }
 
   .icon {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    height: 20px;
+    filter: var(--nav-icons);
+    opacity: 0.8;
+    transition: transform 0.3s ease;
   }
 
   .icontxt {
     font-size: 14px;
     text-align: center;
   }
-  .line {
-    width: 22px;
-    height: 2px;
-    border-radius: 4px;
-    background-color: var(--main-color);
-    opacity: 0.8;
-  }
-
   .high_on_this_page {
     margin-top: 10px;
     padding: 20px;
     background-color: var(--like-bg);
     border-radius: 14px;
+    transform: translateX(300px);
+    transition: transform 0.4s ease-in-out;
   }
 
   .highlight_button:active {
@@ -87,16 +82,24 @@
   }
 
   .visible {
-    display: none;
+    transform: translateX(0px);
   }
 
   .btnActive .icontxt {
     font-weight: 700;
   }
   .btnActive .icon {
-    gap: 4px;
+    transform: scaleX(-1);
+    opacity: 1;
   }
-  .btnActive .line {
-    height: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .icontxt {
+    display: none;
+  }
+
+  .highlight_button {
+    width: fit-content;
   }
 }

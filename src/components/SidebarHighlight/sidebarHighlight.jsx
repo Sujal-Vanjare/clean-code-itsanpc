@@ -5,7 +5,7 @@ import styles from "./sidebarHighlight.module.css";
 function scrollToContentSection(sectionId) {
   const contentSection = document.getElementById(sectionId);
   if (contentSection) {
-    const topOffset = contentSection.offsetTop - 29;
+    const topOffset = contentSection.offsetTop - 70;
     window.scrollTo({ top: topOffset, behavior: "smooth" });
   }
 }
@@ -99,17 +99,13 @@ const SidebarHighlight = (props) => {
         } `}
         onClick={visibleButton}
       >
-        <div className={styles.icon}>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-        </div>
+        <img src="/side-arrow.svg" alt="" className={styles.icon} />
         <div className={styles.icontxt}>Highlights</div>
       </div>
 
       <div
         className={`${styles.high_on_this_page}  ${
-          isVisible ? "" : styles.visible
+          isVisible ? styles.visible : ""
         } `}
       >
         <ul className={styles.items}>

@@ -39,8 +39,8 @@ const HeroCarousel = (props) => {
               className={styles.carouselImage}
               src={data.attributes.thumbnail_img_url}
               alt="carousel image"
-              width={1416}
-              height={619}
+              width={1200}
+              height={675}
               priority
             />
             <div className={styles.carouselText}>

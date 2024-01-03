@@ -29,7 +29,10 @@
 
 .likeText {
   font-size: 14px;
-  padding-bottom: 2rpx;
+  line-height: 1.28577;
+  font-weight: 400;
+  letter-spacing: -0.016em;
+  padding-top: 2px;
 }
 
 .icon {

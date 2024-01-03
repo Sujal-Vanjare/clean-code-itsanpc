@@ -1,4 +1,57 @@
 .page {
-  padding: 45px 0;
-  color: var(--main-color);
+  color: var(--main-text-color);
+  margin-top: 45px;
+}
+
+/*  */
+.topSection {
+  background-color: var(--row-bg);
+  padding: 10px 0;
+}
+.section {
+  background-color: var(--row-bg);
+  margin-top: 25px;
+  padding: 36px 0;
+}
+
+.sectionHead {
+  margin: 0 auto;
+  width: 980px;
+  font-size: 28px;
+  line-height: 1.16667;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+
+  margin-bottom: 28px;
+}
+
+.sectionHead2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--date-text-color);
+}
+
+@media only screen and (max-width: 1068px) {
+  .sectionHead {
+    width: 692px;
+    gap: 25px;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .sectionHead2 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .sectionHead {
+    margin: 0 auto;
+    width: 87.5%;
+    font-size: 21px;
+    margin-bottom: 24px;
+  }
+
+  .sectionHead2 {
+    font-size: 18px;
+  }
 }
