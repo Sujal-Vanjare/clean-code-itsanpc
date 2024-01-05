@@ -145,6 +145,7 @@ html {
   max-width: 980px;
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .article {
