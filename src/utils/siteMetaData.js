@@ -7,7 +7,7 @@ const siteMetadata = {
   language: "en-us",
   siteUrl: "https://itsanpc.vercel.app", // your website URL
   siteLogo: "/website-logo.svg",
-  socialBanner: "/website_poster.webp", // add social banner in the public folder
+  socialBanner: "/website_poster_1.webp", // add social banner in the public folder
   email: "sujalvanjaredev@gmail.com",
   github: "https://github.com/Sujal-Vanjare",
   twitter: "https://twitter.com/sujal169",
