@@ -88,8 +88,27 @@ export default async function Page({ params }) {
 
   const blogUrl = siteMetadata.siteUrl + "/blog/" + data?.slug;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: data?.title,
+    description: data?.subtitle,
+    image: [data?.thumbnail_img_url, data?.main_img_url],
+    datePublished: data?.publishedAt,
+    dateModified: data?.updatedAt,
+    author: {
+      "@type": "Person",
+      name: data?.author,
+      url: blogUrl,
+    },
+  };
+
   return (
-    <main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="blogContainer">
         <article className="article">
           <header className="hero">
@@ -146,6 +165,6 @@ export default async function Page({ params }) {
           <SidebarHighlight sections={data?.sections} />
         </div>
       </div>
-    </main>
+    </>
   );
 }

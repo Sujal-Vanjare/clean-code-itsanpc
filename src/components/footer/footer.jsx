@@ -40,6 +40,9 @@ export default function footer() {
               We're excited to partner with industry leaders and enthusiasts to
               bring valuable content to our audience.
             </p>
+            <Link href="/sitemap.xml" className={styles.email}>
+              sitemap.xml
+            </Link>
           </div>
 
           <div className={styles.socialMedia}>

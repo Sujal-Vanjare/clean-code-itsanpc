@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://itsanpc.vercel.app
+
+# Sitemaps
+Sitemap: https://itsanpc.vercel.app/sitemap.xml
