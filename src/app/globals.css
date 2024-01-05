@@ -138,12 +138,6 @@ html {
   justify-content: space-between;
 }
 
-/* Top Carousal dot style  */
-
-.carousel .control-dots .dot {
-  background: var(--main-color) !important;
-}
-
 /* Blog article styles */
 
 .blogContainer {

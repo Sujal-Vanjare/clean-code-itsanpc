@@ -9,15 +9,20 @@ export async function fetchDataFromApi(endpoints) {
     // cache: "no-store",
   };
 
-  const res = await fetch(`${API_URL}${endpoints}`, options);
+  try {
+    const res = await fetch(`${API_URL}${endpoints}`, options);
 
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
+    if (!res.ok) {
+      console.error("Error in fetchDataFromApi:", res.status, res.statusText);
+      throw new Error("Failed to fetch data");
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error in fetchDataFromApi:", error.message);
+    throw error;
   }
-
-  const data = await res.json();
-  return data;
 }
 
 export async function putDataToApi(endpoint, data) {
@@ -35,11 +40,17 @@ export async function putDataToApi(endpoint, data) {
     if (response.ok) {
       return await response.json();
     } else {
+      console.error(
+        "Error in putDataToApi:",
+        response.status,
+        response.statusText
+      );
       throw new Error(
         `Failed to put data to the API: ${response.status} - ${response.statusText}`
       );
     }
   } catch (error) {
+    console.error("Error in putDataToApi:", error.message);
     throw error;
   }
 }

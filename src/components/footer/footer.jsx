@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./footer.module.css";
 import Image from "next/image";
+import siteMetadata from "@/utils/siteMetaData";
 
 export default function footer() {
   return (
@@ -45,7 +46,7 @@ export default function footer() {
             <div className={styles.socialMediaLinks}>
               <div className={styles.followUs}>Follow us on</div>
 
-              <Link href="">
+              <Link href={siteMetadata.twitter} target="_blank">
                 <Image
                   className={styles.icons}
                   src="/twittx.svg"
@@ -63,13 +64,13 @@ export default function footer() {
                   alt="youtube icon"
                 />
               </Link>
-              <Link href="">
+              <Link href={siteMetadata.github} target="_blank">
                 <Image
                   className={styles.icons}
-                  src="/instagram.svg"
+                  src="/github-ic.svg"
                   width={48}
                   height={48}
-                  alt="youtube icon"
+                  alt="github icon"
                 />
               </Link>
             </div>

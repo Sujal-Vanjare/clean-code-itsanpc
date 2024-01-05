@@ -1,37 +1,33 @@
 "use client";
 import { useState } from "react";
 import styles from "./links.module.css";
-import { usePathname } from "next/navigation";
 
-export default function Links() {
-  const pathname = usePathname();
-  const currentURL = `${process.env.NEXT_PUBLIC_SITE_URL}${pathname}`;
-
+export default function Links(props) {
   const [message, setMessage] = useState("");
 
   const handleWhatsAppClick = () => {
     const shareURL = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-      currentURL
+      props.url
     )}`;
     window.open(shareURL, "_blank");
   };
 
   const handleTwitterClick = () => {
     const shareURL = `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-      currentURL
+      props.url
     )}`;
     window.open(shareURL, "_blank");
   };
 
   const handleEmailClick = () => {
     const subject = encodeURIComponent("Check out this blog");
-    const body = encodeURIComponent(currentURL);
+    const body = encodeURIComponent(props.url);
     const shareURL = `mailto:?subject=${subject}&body=${body}`;
     window.open(shareURL, "_blank");
   };
 
   const handleCopyLinkClick = () => {
-    navigator.clipboard.writeText(currentURL).then(() => {
+    navigator.clipboard.writeText(props.url).then(() => {
       setMessage("Copied to clipboard");
       // Automatically clear the message after a few seconds
       setTimeout(() => setMessage(""), 3000);

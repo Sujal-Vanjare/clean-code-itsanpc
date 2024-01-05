@@ -77,13 +77,14 @@
   z-index: 10;
   justify-content: center;
   align-items: center;
-  background-color: var(--carousal-pause-bg);
+  background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 
   width: 36px;
   height: 36px;
   border-radius: 100%;
   user-select: none;
+  backdrop-filter: blur(4px);
 }
 
 .prevArrow {
@@ -94,14 +95,14 @@
   z-index: 10;
   justify-content: center;
   align-items: center;
-  background-color: var(--carousal-arrow-bg);
+  background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
 
   width: 40px;
   height: 40px;
   border-radius: 5px;
-
   user-select: none;
+  backdrop-filter: blur(4px);
 }
 
 .nextArrow {
@@ -112,13 +113,14 @@
   z-index: 10;
   justify-content: center;
   align-items: center;
-  background-color: var(--carousal-arrow-bg);
+  background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   width: 40px;
   height: 40px;
   border-radius: 5px;
 
   user-select: none;
+  backdrop-filter: blur(4px);
 }
 
 .prevArrow img,
@@ -127,12 +129,12 @@
 }
 
 .pauseButton:hover {
-  background-color: var(--hover-pause-bg);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nextArrow:hover,
 .prevArrow:hover {
-  background-color: var(--hover-arrow-bg);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 1260px) {
