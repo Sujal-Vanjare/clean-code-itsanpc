@@ -47,7 +47,10 @@ const HeroCarousel = (props) => {
               <h2 className={styles.title}>{data.attributes.title}</h2>
               <p className={styles.subtitle}>{data.attributes.subtitle}</p>
 
-              <p className={styles.seeMore}>See more</p>
+              <div className={styles.seeMore}>
+                <p>See more</p>
+                <img className={styles.arrow} src="halfArrow.svg" />
+              </div>
             </div>
           </Link>
         ))}

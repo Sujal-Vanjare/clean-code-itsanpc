@@ -1,13 +1,10 @@
+import ComingSoon from "@/components/ComingSoon/comingSoon";
 import styles from "./page.module.css";
 
-export default function Support() {
-    return (
-        <>
-            <div className={styles.page}>
-                support page
-                
-            </div>
-        </>
-    )
-
+export default async function Page() {
+  return (
+    <main className={styles.page}>
+      <ComingSoon />
+    </main>
+  );
 }
