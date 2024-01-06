@@ -4,8 +4,8 @@ import styles from "./likes.module.css";
 import { fetchDataFromApi, putDataToApi } from "@/utils/api";
 
 export default function Likes(props) {
-  const [likes, setLikes] = useState("");
-  const [dislikes, setDislikes] = useState("");
+  const [likes, setLikes] = useState("..");
+  const [dislikes, setDislikes] = useState("..");
   const [isLiked, setIsLiked] = useState(false);
   const [isDisliked, setIsDisliked] = useState(false);
   const [loading, setLoading] = useState(true);

@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import siteMetadata from "@/utils/siteMetaData";
 import { fetchDataFromApi } from "@/utils/api";
+import { getSearchData } from "./blog/[slug]/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,14 +46,6 @@ export const metadata = {
     images: [siteMetadata.socialBanner], // Must be an absolute URL
   },
 };
-
-export async function getSearchData() {
-  const data = await fetchDataFromApi(
-    "/api/blogs?sort[0]=id:asc&fields[0]=title&fields[1]=subtitle&fields[2]=slug"
-  );
-
-  return data;
-}
 
 export default async function RootLayout({ children }) {
   const dataForSearch = await getSearchData();

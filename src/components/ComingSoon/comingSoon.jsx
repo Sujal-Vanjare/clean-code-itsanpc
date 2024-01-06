@@ -1,5 +1,3 @@
-"use client";
-import { useEffect, useState } from "react";
 import styles from "./comingSoon.module.css";
 
 export default function ComingSoon() {

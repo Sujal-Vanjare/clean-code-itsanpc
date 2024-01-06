@@ -1,6 +1,6 @@
 import { API_URL, STRAPI_API_TOKEN } from "./urls";
 
-export async function fetchDataFromApi(endpoints) {
+export async function fetchDataFromApi(endpoints, revalidateTag) {
   const options = {
     method: "GET",
     headers: {

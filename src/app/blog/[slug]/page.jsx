@@ -6,8 +6,16 @@ import Links from "@/components/Links/links";
 import Views from "@/components/ViewsCount/views";
 import siteMetadata from "@/utils/siteMetaData";
 
+export async function getSearchData() {
+  const data = await fetchDataFromApi(
+    "/api/blogs?sort[0]=id:asc&fields[0]=title&fields[1]=subtitle&fields[2]=slug"
+  );
+
+  return data;
+}
+
 export async function generateStaticParams() {
-  const blog = await fetchDataFromApi("/api/blogs?populate=*");
+  const blog = await getSearchData();
 
   return blog?.data?.map((blog) => ({
     slug: blog.attributes.slug,

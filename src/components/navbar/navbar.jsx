@@ -222,9 +222,7 @@ export default function Navbar(props) {
                   filteredData.slice(0, 5).map((item) => (
                     <li key={item.id} onClick={removeDesktopSearchHideClass}>
                       <Link
-                        href={`${"http://localhost:3000"}/blog/${
-                          item.attributes.slug
-                        }`}
+                        href={`${siteMetadata.siteUrl}/blog/${item.attributes.slug}`}
                         replace
                       >
                         {item.attributes.title}
@@ -271,9 +269,7 @@ export default function Navbar(props) {
                   filteredData.slice(0, 5).map((item) => (
                     <li key={item.id} onClick={mobileSearchComplete}>
                       <Link
-                        href={`${"http://localhost:3000"}/blog/${
-                          item.attributes.slug
-                        }`}
+                        href={`${siteMetadata.siteUrl}/blog/${item.attributes.slug}`}
                         replace
                       >
                         {item.attributes.title}

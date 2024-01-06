@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { fetchDataFromApi, putDataToApi } from "@/utils/api";
 
 export default function Views(props) {
-  const [viewCount, setViewCount] = useState("");
+  const [viewCount, setViewCount] = useState("....");
 
   useEffect(() => {
     // Fetch the current view count
