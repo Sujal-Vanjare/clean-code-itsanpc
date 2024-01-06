@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import siteMetadata from "@/utils/siteMetaData";
+import { fetchDataFromApi } from "@/utils/api";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,12 +46,22 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export async function getSearchData() {
+  const data = await fetchDataFromApi(
+    "/api/blogs?sort[0]=id:asc&fields[0]=title&fields[1]=subtitle&fields[2]=slug"
+  );
+
+  return data;
+}
+
+export default async function RootLayout({ children }) {
+  const dataForSearch = await getSearchData();
+
   return (
     <html lang="en">
       <body className={`${inter.className} container `}>
         <ThemeProvider>
-          <Navbar />
+          <Navbar dataForSearch={dataForSearch} />
           <div className="footer-container">
             {children}
             <Footer />

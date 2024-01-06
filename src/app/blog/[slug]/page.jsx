@@ -139,12 +139,8 @@ export default async function Page({ params }) {
             <div className="link-container">
               <Links url={blogUrl} />
               <div className="like-container">
-                <Likes
-                  like={data?.likes}
-                  dislike={data?.dislikes}
-                  id={blogId}
-                />
-                <Views views={data?.view_count} id={blogId} />
+                <Likes blogId={blogId} />
+                <Views blogId={blogId} />
               </div>
             </div>
           </header>

@@ -2,32 +2,33 @@
 
 import styles from "./views.module.css";
 import { useEffect, useState } from "react";
-import { putDataToApi } from "@/utils/api";
+import { fetchDataFromApi, putDataToApi } from "@/utils/api";
 
 export default function Views(props) {
-  const [viewCount, setViewCount] = useState(props.views || 0);
+  const [viewCount, setViewCount] = useState("");
 
   useEffect(() => {
-    incrementViews();
-  }, [props.id]);
+    // Fetch the current view count
+    fetchDataFromApi(`/api/blogs/${props.blogId}?fields[0]=view_count`)
+      .then((data) => {
+        setViewCount(data.data.attributes.view_count);
 
-  const incrementViews = async () => {
-    try {
-      const response = await putDataToApi(`/api/blogs/${props.id}`, {
-        data: {
-          view_count: viewCount + 1,
-        },
+        // Increment the view count and update it in the backend
+        const updatedViewCount = data.data.attributes.view_count + 1;
+        return putDataToApi(`/api/blogs/${props.blogId}`, {
+          data: {
+            view_count: updatedViewCount,
+          },
+        });
+      })
+      .then((updatedData) => {
+        // Update the view count in the state
+        setViewCount(updatedData.data.attributes.view_count);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch or update View Count", error);
       });
-
-      if (response.data) {
-        setViewCount(response.data.attributes.view_count);
-      } else {
-        console.error("Failed to update views:", response.error.message);
-      }
-    } catch (error) {
-      console.error("Error updating views:", error.message);
-    }
-  };
+  }, [props.blogId]);
 
   return (
     <div className={styles.viewText}>{viewCount.toLocaleString()} Views</div>

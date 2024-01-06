@@ -1,22 +1,26 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 import { usePathname } from "next/navigation";
+import siteMetadata from "@/utils/siteMetaData";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const pathname = usePathname();
+  const [searchInput, setSearchInput] = useState("");
   const [isHide, setIsHide] = useState(true);
+  const [isActive, setIsActive] = useState(true);
+  const [searchActive, setSearchActive] = useState(true);
+
   const desktopSearchHideClass = () => {
     setIsHide(false);
   };
   const removeDesktopSearchHideClass = () => {
     setIsHide(true);
+    setSearchInput("");
   };
-
-  const [isActive, setIsActive] = useState(true);
 
   const mobileNavActiveClass = () => {
     setIsActive(!isActive);
@@ -25,13 +29,32 @@ export default function Navbar() {
     setIsActive(true);
   };
 
-  const [searchActive, setSearchActive] = useState(true);
   const mobileSearchActiveClass = () => {
     setSearchActive(false);
   };
   const cancelMobileSearchActiveClass = () => {
     setSearchActive(true);
   };
+
+  const mobileSearchComplete = () => {
+    setSearchActive(true);
+    setIsActive(true);
+    setSearchInput("");
+  };
+  // search bar functionality
+
+  const handleInputChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const filteredData = props.dataForSearch.data.filter((item) => {
+    const { title, subtitle } = item.attributes;
+    const searchLower = searchInput.toLowerCase();
+    return (
+      title.toLowerCase().includes(searchLower) ||
+      subtitle.toLowerCase().includes(searchLower)
+    );
+  });
 
   return (
     <>
@@ -178,7 +201,12 @@ export default function Navbar() {
             <div className={styles.link_search}></div>
             <div className={styles.search_bar}>
               <form action="">
-                <input type="text" placeholder="Search itsanpc.com" />
+                <input
+                  type="text"
+                  placeholder="Search itsanpc.com"
+                  value={searchInput}
+                  onChange={handleInputChange}
+                />
               </form>
             </div>
             <div
@@ -188,22 +216,26 @@ export default function Navbar() {
 
             <div className={styles.quick_links}>
               <h2>Quick Links</h2>
+
               <ul>
-                <li>
-                  <Link href="#">Visiting an Apple Store FAQ</Link>
-                </li>
-                <li>
-                  <Link href="#">Shop Apple Store Online</Link>
-                </li>
-                <li>
-                  <Link href="#">Accessories</Link>
-                </li>
-                <li>
-                  <Link href="#">AirPods</Link>
-                </li>
-                <li>
-                  <Link href="#">AirTag</Link>
-                </li>
+                {filteredData.length > 0 ? (
+                  filteredData.slice(0, 5).map((item) => (
+                    <li key={item.id} onClick={removeDesktopSearchHideClass}>
+                      <Link
+                        href={`${"http://localhost:3000"}/blog/${
+                          item.attributes.slug
+                        }`}
+                        replace
+                      >
+                        {item.attributes.title}
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  <li>
+                    <p className={styles.noMatch}>No matching results found.</p>
+                  </li>
+                )}
               </ul>
             </div>
           </div>
@@ -219,6 +251,8 @@ export default function Navbar() {
                 <input
                   type="text"
                   placeholder="Search itsanpc.com"
+                  value={searchInput}
+                  onChange={handleInputChange}
                   onClick={mobileSearchActiveClass}
                 />
               </form>
@@ -233,21 +267,26 @@ export default function Navbar() {
             <div className={styles.quick_links}>
               <h2>Quick Links</h2>
               <ul>
-                <li>
-                  <Link href="#">Visiting an Apple Store FAQ</Link>
-                </li>
-                <li>
-                  <Link href="#">Shop Apple Store Online</Link>
-                </li>
-                <li>
-                  <Link href="#">Accessories</Link>
-                </li>
-                <li>
-                  <Link href="#">AirPods</Link>
-                </li>
-                <li>
-                  <Link href="#">AirTag</Link>
-                </li>
+                {filteredData.length > 0 ? (
+                  filteredData.slice(0, 5).map((item) => (
+                    <li key={item.id} onClick={mobileSearchComplete}>
+                      <Link
+                        href={`${"http://localhost:3000"}/blog/${
+                          item.attributes.slug
+                        }`}
+                        replace
+                      >
+                        {item.attributes.title}
+                      </Link>
+                    </li>
+                  ))
+                ) : (
+                  <li>
+                    <p className={styles.noMatchMo}>
+                      No matching results found.
+                    </p>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

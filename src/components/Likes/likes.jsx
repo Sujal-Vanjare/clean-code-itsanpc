@@ -1,37 +1,48 @@
 "use client";
-// Import necessary dependencies
 import { useEffect, useState } from "react";
 import styles from "./likes.module.css";
-import { putDataToApi } from "@/utils/api";
+import { fetchDataFromApi, putDataToApi } from "@/utils/api";
 
 export default function Likes(props) {
-  const [likes, setLikes] = useState(props.like);
-  const [dislikes, setDislikes] = useState(props.dislike);
+  const [likes, setLikes] = useState("");
+  const [dislikes, setDislikes] = useState("");
   const [isLiked, setIsLiked] = useState(false);
   const [isDisliked, setIsDisliked] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const likedStatus = localStorage.getItem(`liked_${props.id}`);
-    const dislikedStatus = localStorage.getItem(`disliked_${props.id}`);
+    fetchDataFromApi(
+      `/api/blogs/${props.blogId}?fields[0]=likes&fields[1]=dislikes`
+    )
+      .then((data) => {
+        setLikes(data.data.attributes.likes || 0);
+        setDislikes(data.data.attributes.dislikes || 0);
 
-    if (likedStatus === "true") {
-      setIsLiked(true);
-    }
+        const likedStatus = localStorage.getItem(`liked_${props.blogId}`);
+        const dislikedStatus = localStorage.getItem(`disliked_${props.blogId}`);
 
-    if (dislikedStatus === "true") {
-      setIsDisliked(true);
-    }
+        if (likedStatus === "true") {
+          setIsLiked(true);
+        }
 
-    setLoading(false);
-  }, [props.id]);
+        if (dislikedStatus === "true") {
+          setIsDisliked(true);
+        }
+
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Failed to fetch like and dislike counts", error);
+        setLoading(false);
+      });
+  }, [props.blogId]);
 
   const handleLikeClick = async () => {
     if (!isLiked && !isDisliked && !loading) {
       const newLikes = likes + 1;
 
       try {
-        const response = await putDataToApi(`/api/blogs/${props.id}`, {
+        const response = await putDataToApi(`/api/blogs/${props.blogId}`, {
           data: {
             likes: newLikes,
           },
@@ -43,8 +54,8 @@ export default function Likes(props) {
 
           // Remove dislike status if user switches from dislike to like
           setIsDisliked(false);
-          localStorage.setItem(`liked_${props.id}`, "true");
-          localStorage.removeItem(`disliked_${props.id}`);
+          localStorage.setItem(`liked_${props.blogId}`, "true");
+          localStorage.removeItem(`disliked_${props.blogId}`);
         } else {
           console.error("Failed to update likes:", response.error.message);
         }
@@ -56,7 +67,7 @@ export default function Likes(props) {
       const newLikes = likes - 1;
 
       try {
-        const response = await putDataToApi(`/api/blogs/${props.id}`, {
+        const response = await putDataToApi(`/api/blogs/${props.blogId}`, {
           data: {
             likes: newLikes,
           },
@@ -67,7 +78,7 @@ export default function Likes(props) {
           setIsLiked(false);
 
           // Remove like status if user unlikes
-          localStorage.removeItem(`liked_${props.id}`);
+          localStorage.removeItem(`liked_${props.blogId}`);
         } else {
           console.error("Failed to update likes:", response.error.message);
         }
@@ -82,7 +93,7 @@ export default function Likes(props) {
       const newDislikes = dislikes + 1;
 
       try {
-        const response = await putDataToApi(`/api/blogs/${props.id}`, {
+        const response = await putDataToApi(`/api/blogs/${props.blogId}`, {
           data: {
             dislikes: newDislikes,
           },
@@ -94,8 +105,8 @@ export default function Likes(props) {
 
           // Remove like status if user switches from like to dislike
           setIsLiked(false);
-          localStorage.setItem(`disliked_${props.id}`, "true");
-          localStorage.removeItem(`liked_${props.id}`);
+          localStorage.setItem(`disliked_${props.blogId}`, "true");
+          localStorage.removeItem(`liked_${props.blogId}`);
         } else {
           console.error("Failed to update dislikes:", response.error.message);
         }
@@ -107,7 +118,7 @@ export default function Likes(props) {
       const newDislikes = dislikes - 1;
 
       try {
-        const response = await putDataToApi(`/api/blogs/${props.id}`, {
+        const response = await putDataToApi(`/api/blogs/${props.blogId}`, {
           data: {
             dislikes: newDislikes,
           },
@@ -118,7 +129,7 @@ export default function Likes(props) {
           setIsDisliked(false);
 
           // Remove dislike status if user undislikes
-          localStorage.removeItem(`disliked_${props.id}`);
+          localStorage.removeItem(`disliked_${props.blogId}`);
         } else {
           console.error("Failed to update dislikes:", response.error.message);
         }
