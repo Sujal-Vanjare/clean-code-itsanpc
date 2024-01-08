@@ -4,7 +4,6 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import siteMetadata from "@/utils/siteMetaData";
-import { fetchDataFromApi } from "@/utils/api";
 import { getSearchData } from "./blog/[slug]/page";
 
 const inter = Inter({ subsets: ["latin"] });

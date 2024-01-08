@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: "Its An PC",
-  author: "CodeBucks",
+  author: "Sujal",
   headerTitle: "Blog Website",
   description:
     "Explore the latest in PC technology, gaming, and hardware at Its An PC. Discover expert guides, reviews, and insightful content to elevate your computing experience. Stay ahead in the world of PCs with our up-to-date insights and recommendations. Unleash the power of your machine with Its An PC!",

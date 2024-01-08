@@ -1,8 +1,10 @@
+import siteMetadata from "@/utils/siteMetaData";
+
 export default function manifest() {
   return {
-    name: "Next.js App",
-    short_name: "Next.js App",
-    description: "Next.js App",
+    name: siteMetadata.title,
+    short_name: siteMetadata.title,
+    description: siteMetadata.description,
     start_url: "/",
     display: "standalone",
     // background_color: "#fff",
