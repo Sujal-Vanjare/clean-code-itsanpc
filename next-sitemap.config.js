@@ -1,4 +1,6 @@
+const siteMetadata = require("@/utils/siteMetaData");
+
 module.exports = {
-  siteUrl: "https://itsanpc.vercel.app",
+  siteUrl: siteMetadata.siteUrl,
   generateRobotsTxt: true,
 };
