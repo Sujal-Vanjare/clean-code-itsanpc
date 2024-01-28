@@ -11,7 +11,6 @@ const siteMetadata = {
   email: "sujalvanjaredev@gmail.com",
   github: "https://github.com/Sujal-Vanjare",
   twitter: "https://twitter.com/sujal169",
-  linkedin: "https://www.linkedin.com/in/sujal-vanjare-5195152a0/",
   locale: "en-US",
 };
 
