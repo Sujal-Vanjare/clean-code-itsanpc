@@ -1,17 +1,7 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./productCard.module.css";
-
-export function formatCount(count) {
-  if (count < 1000) {
-    return count.toString();
-  } else if (count < 10000) {
-    return (count / 1000).toFixed(1) + "K";
-  } else {
-    return Math.floor(count / 1000) + "K";
-  }
-}
+import { formatCount } from "@/utils/helper";
 
 export default function ProductCard(props) {
   return (
@@ -34,6 +24,8 @@ export default function ProductCard(props) {
 
             <div className={styles.blogDesc}>
               <div className={styles.blogHead}>
+                {/* if data exist then run, check if it is an array, if array has at leas one item, if more than one then  join them with (, ) */}
+
                 <p className={styles.category}>
                   {data?.attributes?.categories &&
                   Array.isArray(data?.attributes?.categories?.data) &&

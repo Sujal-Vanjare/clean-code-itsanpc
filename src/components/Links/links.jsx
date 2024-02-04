@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./links.module.css";
 
 export default function Links(props) {
+  // To notify user, the text is Copied
   const [message, setMessage] = useState("");
 
   const handleWhatsAppClick = () => {

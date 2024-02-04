@@ -4,11 +4,14 @@ import HeroCarousel from "@/components/HeroCarousel/heroCarousel";
 import { fetchDataFromApi } from "@/utils/api";
 import ProductCard from "@/components/ProductCard/productCard";
 
+// Top Carousal Data
 export async function getCarousalBlog() {
   const data = await fetchDataFromApi("/api/pages/2?populate=*");
 
   return data;
 }
+
+// Main Normal Blogs Card Data
 export async function getBlog() {
   const data = await fetchDataFromApi(
     "/api/pages/1?populate[0]=blogs&populate[1]=blogs.categories"
@@ -17,6 +20,7 @@ export async function getBlog() {
   return data;
 }
 
+// Product Blog Card
 export async function getProductBlog() {
   const data = await fetchDataFromApi(
     "/api/pages/9?populate[0]=blogs&populate[1]=blogs.categories"

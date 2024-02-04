@@ -6,6 +6,7 @@ import Links from "@/components/Links/links";
 import Views from "@/components/ViewsCount/views";
 import siteMetadata from "@/utils/siteMetaData";
 
+// fetching search data
 export async function getSearchData() {
   const data = await fetchDataFromApi(
     "/api/blogs?sort[0]=id:asc&fields[0]=title&fields[1]=subtitle&fields[2]=slug"
@@ -14,6 +15,7 @@ export async function getSearchData() {
   return data;
 }
 
+// generating static paths
 export async function generateStaticParams() {
   const blog = await getSearchData();
 
@@ -133,7 +135,7 @@ export default async function Page({ params }) {
             <div className="time-container">
               <div>
                 Published on{" "}
-                <time className="time" dateTime="2023-01-15T10:30:00Z">
+                <time className="time" dateTime={data?.date}>
                   {data?.date}
                 </time>{" "}
               </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
@@ -8,51 +8,74 @@ import { usePathname } from "next/navigation";
 import siteMetadata from "@/utils/siteMetaData";
 
 export default function Navbar(props) {
+  // For which page i am on, to highlight navbar li
   const pathname = usePathname();
+
+  // For Search Input Value Change
   const [searchInput, setSearchInput] = useState("");
+
+  // For Desktop Search Bar
   const [isHide, setIsHide] = useState(true);
+
+  // For Mobile Nav Links Page
   const [isActive, setIsActive] = useState(true);
+
+  // For Mobile Search Bar
   const [searchActive, setSearchActive] = useState(true);
 
+  // for search Input focus
+  const searchInputRef = useRef(null);
+
+  // Desktop Search Bar Show
   const desktopSearchHideClass = () => {
     setIsHide(false);
+    searchInputRef.current.focus(); //focus input
   };
+
+  // Desktop Search Bar Hide
   const removeDesktopSearchHideClass = () => {
     setIsHide(true);
     setSearchInput("");
+    searchInputRef.current.blur(); // remove focus input
   };
 
+  // Mobile Nav Links Show or Hide
   const mobileNavActiveClass = () => {
     setIsActive(!isActive);
   };
+  // Mobile Nav Links Hide
   const removeMobileNavActiveClass = () => {
     setIsActive(true);
   };
 
+  // Mobile Search bar Active
   const mobileSearchActiveClass = () => {
     setSearchActive(false);
   };
+  // Mobile Search bar Hide
   const cancelMobileSearchActiveClass = () => {
     setSearchActive(true);
   };
 
+  // Mobile Search bar Quick Links click after effect
   const mobileSearchComplete = () => {
     setSearchActive(true);
     setIsActive(true);
     setSearchInput("");
   };
-  // search bar functionality
 
+  // Add Input value to the Search input State
   const handleInputChange = (e) => {
     setSearchInput(e.target.value);
   };
 
+  // Filtering the Blogs by Search bar input
   const filteredData = props.dataForSearch.data.filter((item) => {
-    const { title, subtitle } = item.attributes;
-    const searchLower = searchInput.toLowerCase();
+    const { title, subtitle } = item.attributes; // destructuring Title, Subtitle from data
+    const searchLower = searchInput.toLowerCase(); // lowercasing the Search Input State value
     return (
       title.toLowerCase().includes(searchLower) ||
-      subtitle.toLowerCase().includes(searchLower)
+      subtitle.toLowerCase().includes(searchLower) // Either it should match the Title or Subtitle
     );
   });
 
@@ -206,6 +229,7 @@ export default function Navbar(props) {
                   placeholder="Search itsanpc.com"
                   value={searchInput}
                   onChange={handleInputChange}
+                  ref={searchInputRef}
                 />
               </form>
             </div>
@@ -218,18 +242,23 @@ export default function Navbar(props) {
               <h2>Quick Links</h2>
 
               <ul>
-                {filteredData.length > 0 ? (
-                  filteredData.slice(0, 5).map((item) => (
-                    <li key={item.id} onClick={removeDesktopSearchHideClass}>
-                      <Link
-                        href={`${siteMetadata.siteUrl}/blog/${item.attributes.slug}`}
-                        replace
-                      >
-                        {item.attributes.title}
-                      </Link>
-                    </li>
-                  ))
+                {filteredData.length > 0 ? ( // check filter data has any items if has then, run code
+                  filteredData.slice(0, 5).map(
+                    (
+                      item // only slice first 5 items and map them
+                    ) => (
+                      <li key={item.id} onClick={removeDesktopSearchHideClass}>
+                        <Link
+                          href={`${siteMetadata.siteUrl}/blog/${item.attributes.slug}`}
+                          replace
+                        >
+                          {item.attributes.title}
+                        </Link>
+                      </li>
+                    )
+                  )
                 ) : (
+                  // if filter data not don't  have data then show this
                   <li>
                     <p className={styles.noMatch}>No matching results found.</p>
                   </li>
@@ -289,8 +318,7 @@ export default function Navbar(props) {
         </div>
 
         <div
-          className={`${styles.overlay} ${isHide ? "" : styles.show} `}
-          // style={overlayStyle}
+          className={`${styles.overlay} ${isHide ? "" : styles.show} `} // overlay when desktop search bar active
           onClick={removeDesktopSearchHideClass}
         ></div>
       </div>

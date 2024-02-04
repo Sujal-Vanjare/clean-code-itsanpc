@@ -7,6 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 const HeroCarousel = (props) => {
+  // For Carousal auto Slide Stop
   const [autoplay, setAutoplay] = useState(true);
 
   const toggleAutoplay = () => {

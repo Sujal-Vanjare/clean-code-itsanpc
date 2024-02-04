@@ -104,7 +104,7 @@ nav .desktop_nav li .pageActive {
 }
 
 .search_container {
-  width: 60%;
+  width: 866px;
   margin: 0 auto;
   padding: 0 42px;
   position: fixed;
@@ -377,6 +377,9 @@ nav .desktop_nav li .pageActive {
   .nav_container nav {
     width: 100%;
     padding: 0 32px;
+  }
+  .search_container {
+    width: 82%;
   }
 }
 

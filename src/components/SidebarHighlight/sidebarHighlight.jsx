@@ -1,7 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import { useEffect, useState } from "react";
 import styles from "./sidebarHighlight.module.css";
 
+// Function to smoothly scroll to content section
 function scrollToContentSection(sectionId) {
   const contentSection = document.getElementById(sectionId);
   if (contentSection) {
@@ -10,16 +12,22 @@ function scrollToContentSection(sectionId) {
   }
 }
 
-const SidebarHighlight = (props) => {
+export default function SidebarHighlight(props) {
+  // for highlighting, current li tag
   const [isVisible, setIsVisible] = useState(false);
 
+  // Function to toggle the visibility of the floating sidebar
   const visibleButton = () => {
     setIsVisible(!isVisible);
   };
 
+  // to track the active content section
   const [activeSection, setActiveSection] = useState(null);
+
+  // State for the threshold used by IntersectionObserver
   const [threshold, setThreshold] = useState(0.7); // Default threshold
 
+  // Effect to set up IntersectionObserver for content sections
   useEffect(() => {
     const sidebarItems = document.querySelectorAll(`.${styles.parent_item}`);
 
@@ -55,7 +63,7 @@ const SidebarHighlight = (props) => {
     };
   }, [threshold]); // Re-run the effect when the threshold changes
 
-  // Adjust the threshold value based on screen height
+  // Effect to dynamically adjust the threshold based on screen height
   useEffect(() => {
     const handleResize = () => {
       // Get the current screen height
@@ -124,6 +132,4 @@ const SidebarHighlight = (props) => {
       </div>
     </aside>
   );
-};
-
-export default SidebarHighlight;
+}

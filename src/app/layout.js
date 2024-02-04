@@ -42,7 +42,7 @@ export const metadata = {
     card: "summary_large_image",
     title: siteMetadata.title,
     description: siteMetadata.description,
-    images: [siteMetadata.socialBanner], // Must be an absolute URL
+    images: [siteMetadata.socialBanner],
   },
 };
 
@@ -54,6 +54,7 @@ export default async function RootLayout({ children }) {
       <body className={`${inter.className} container `}>
         <ThemeProvider>
           <Navbar dataForSearch={dataForSearch} />
+          {/*  passing the Data in the Navbar, For Search Bar Filter */}
           <div className="footer-container">
             {children}
             <Footer />
