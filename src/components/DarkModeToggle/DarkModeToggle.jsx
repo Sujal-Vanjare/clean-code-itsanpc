@@ -5,6 +5,7 @@ import styles from "./DarkModeToggle.module.css";
 import { ThemeContext } from "@/context/ThemeContext";
 
 export default function DarkModeToggle() {
+  // Access toggle and mode functions from the ThemeContext using useContext hook
   const { toggle, mode } = useContext(ThemeContext);
 
   return (

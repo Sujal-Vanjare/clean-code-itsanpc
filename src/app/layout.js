@@ -53,6 +53,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} container `}>
         <ThemeProvider>
+          {/* provide theme */}
           <Navbar dataForSearch={dataForSearch} />
           {/*  passing the Data in the Navbar, For Search Bar Filter */}
           <div className="footer-container">
