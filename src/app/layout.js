@@ -53,6 +53,10 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <meta
+        name="google-site-verification"
+        content="k3Mu_NRmonR916_W69sQXbvwCkKEQ8VczZ8IAWJpmBc"
+      />
       <body className={`${inter.className} container `}>
         <ThemeProvider>
           {/* provide theme */}
