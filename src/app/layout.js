@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -61,6 +62,7 @@ export default async function RootLayout({ children }) {
             <Footer />
           </div>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
