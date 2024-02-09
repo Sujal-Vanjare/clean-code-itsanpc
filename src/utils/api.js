@@ -6,7 +6,6 @@ export async function fetchDataFromApi(endpoints) {
     headers: {
       Authorization: "Bearer " + STRAPI_API_TOKEN,
     },
-    // cache: "no-store",
   };
 
   try {
