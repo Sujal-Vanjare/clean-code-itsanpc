@@ -21,7 +21,7 @@ export const metadata = {
   openGraph: {
     title: siteMetadata.title,
     description: siteMetadata.description,
-    url: siteMetadata.url,
+    url: siteMetadata.siteUrl,
     siteName: siteMetadata.title,
     images: [siteMetadata.socialBanner],
     locale: "en_US",
